@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { AnimatePresence } from "framer-motion";
-import "./App.css";
 import PageReveal from "./components/PageReveal";
 import Hero from "./components/Hero";
 import About from "./components/About";
