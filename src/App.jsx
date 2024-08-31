@@ -8,7 +8,7 @@ import About from "./components/About";
 import Lenis from "@studio-freight/lenis";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-import Skills from "./components/skills";
+import Skills from "./components/Skill";
 
 const App = () => {
   const [showPageReveal, setShowPageReveal] = useState(false);
