@@ -9,7 +9,7 @@ const projects = [
     description:
       "TokenStats is a cryptocurrency tracker. It provides real-time updates on cryptocurrency prices, market caps, and other essential metrics. With a minimal interface and responsive design.",
     images: [
-      "https://private-user-images.githubusercontent.com/116868093/361599891-f3ebcc54-0b20-4de7-84b0-2048859f8321.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjUwOTY2MjMsIm5iZiI6MTcyNTA5NjMyMywicGF0aCI6Ii8xMTY4NjgwOTMvMzYxNTk5ODkxLWYzZWJjYzU0LTBiMjAtNGRlNy04NGIwLTIwNDg4NTlmODMyMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwODMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDgzMVQwOTI1MjNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ODk5NmJmZGNjMGNkM2Q1YjAxYmY1MDI2YzM1MWY0ZWJjOTIxMjQ3ZTEzY2FmODYyZTQwNGNkMDU4NTEzMTM2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.M91-sR7_mN_6Oqv8FeY_Md4lCBDCquJznvXDE-sGXEk",
+      "https://i.postimg.cc/Xv3kQQGn/Untitled-design-1.png",
     ],
     techUsed: ["NextJS", "TailwindCSS", "CoinGeckoAPI"],
     link: "https://github.com/parikshit-sh/token-stats-crypto",
