@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: #121212; 
+  background-color: #191970; 
 }
 
 .hero {
@@ -14,7 +14,7 @@ body {
 }
 
 .about-me {
-  background-color: #121212;
+  background-color: #191970;
   color: #FAF9F6;
 }
 

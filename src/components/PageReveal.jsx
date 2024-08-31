@@ -25,7 +25,7 @@ const PageReveal = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
-    <div className="page-reveal fixed top-0 left-0 w-full h-full z-50 bg-[#121212]">
+    <div className="page-reveal fixed top-0 left-0 w-full h-full z-50 bg-[#191970]">
      
     </div>
   );
