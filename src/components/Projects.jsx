@@ -27,7 +27,7 @@ const Projects = () => {
       button.addEventListener("mouseenter", () => {
         gsap.to(button, {
           scale: 1.3,
-          color: "#121212",
+        
           duration: 0.2,
           ease: "power2.out",
         });
@@ -36,7 +36,7 @@ const Projects = () => {
       button.addEventListener("mouseleave", () => {
         gsap.to(button, {
           scale: 1,
-          color: "#121212",
+        
           duration: 0.2,
           ease: "power2.out",
         });
@@ -44,24 +44,17 @@ const Projects = () => {
     });
 
     cards.forEach((card) => {
-      const textElements = card.querySelectorAll(
-        ".pTitle, .text-gray-400, .tech-badge, .btn"
-      );
+
+  
 
       gsap.set(card, { backgroundColor: "transparent" });
-      gsap.set(textElements, { color: "#ffffff" });
-
       card.addEventListener("mouseenter", () => {
         gsap.to(card, {
           duration: 0.3,
-          backgroundColor: "#ffffff",
+        
           ease: "power2.out",
         });
-        gsap.to(textElements, {
-          duration: 0.3,
-          color: "#121212",
-          ease: "power2.out",
-        });
+   
       });
 
       card.addEventListener("mouseleave", () => {
@@ -70,11 +63,7 @@ const Projects = () => {
           backgroundColor: "transparent",
           ease: "power2.out",
         });
-        gsap.to(textElements, {
-          duration: 0.3,
-          color: "#ffffff",
-          ease: "power2.out",
-        });
+      
       });
     });
   }, []);
@@ -89,15 +78,15 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="project-card bg-transparent border-[#FAF9F6] border-b rounded-lg rounded-b-none shadow-lg overflow-hidden transition-transform transform hover:scale-105 flex flex-col lg:flex-row items-center"
+              className="project-card bg-transparent border-white border-b rounded-lg rounded-b-none hover:shadow-lg overflow-hidden transition-transform transform hover:scale-105 flex flex-col lg:flex-row items-center"
             >
-              <div className="p-6 flex-1 flex flex-col justify-between w-full">
+              <div className="p-6 flex-1 flex flex-col justify-between w-full text-white">
                 <div>
-                  <h1 className="pTitle text-[#FAF9F6] text-7xl pb-4 lg:text-7xl select-none">
+                  <h1 className="pTitle text-white text-7xl pb-4 lg:text-7xl select-none">
                     {project.title}
                   </h1>
 
-                  <p className="text-lg text-gray-400 mb-4">
+                  <p className="text-lg text-gray-300 mb-4">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">

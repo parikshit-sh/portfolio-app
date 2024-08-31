@@ -379,6 +379,7 @@ a:hover {
     pointer-events: none;
   }
   
+  
 
   .project-card img {
     height: full;
@@ -403,6 +404,15 @@ a:hover {
     padding: 8px;
   }
 }
+
+@media (min-width:700px){
+
+  .project-card:hover {
+    background-color: transparent;
+  }
+}
+
+
 
 @media (max-width:480px) {
   .dev{
@@ -429,9 +439,7 @@ width: 80%;
     flex-direction: row;
   }
 }
-.project-card:hover .btn svg {
-  fill: #121212;
-}
+
 
 .footer {
   width: 100%;
