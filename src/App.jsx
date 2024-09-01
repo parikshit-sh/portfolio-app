@@ -13,22 +13,17 @@ import Skills from "./components/Skill";
 const App = () => {
   const [showPreLoader, setShowPreLoader] = useState(true);
   const [showNavbar, setShowNavbar] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
 
   useEffect(() => {
-    const screenWidth = window.innerWidth;
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 800);
+    };
 
-    if (screenWidth <= 800) {
-      setIsMobile(true);
-      setShowNavbar(true); 
-    } else {
-      setShowPreLoader(true);
-    }
+    window.addEventListener('resize', handleResize);
 
-    if (screenWidth > 1024) {
-      const lenis = new Lenis({
-        smooth: true,
-      });
+    if (!isMobile) {
+      const lenis = new Lenis({ smooth: true });
 
       const update = (time) => {
         lenis.raf(time);
@@ -39,9 +34,10 @@ const App = () => {
 
       return () => {
         lenis.destroy();
+        window.removeEventListener('resize', handleResize);
       };
     }
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     if (!isMobile && showPreLoader) {
@@ -51,26 +47,28 @@ const App = () => {
       }, 1000); 
 
       return () => clearTimeout(timer);
+    } else {
+      setShowNavbar(true);
     }
-  },);
+  }, [isMobile, showPreLoader]);
 
   return (
     <>
-    <PreLoader />
-    <Router>
-      <div className="overflow-wrapper">
-        <div className="bg-[#082a90] min-h-screen">
-          <AnimatePresence>
-            {showNavbar && <Navbar key="navbar" />}
-            <Hero key="hero" />
-            <About key="about" />
-            <Projects key="projects" />
-            <Skills key="skills" />
-            <Footer key="footer" />
-          </AnimatePresence>
+      {!isMobile && showPreLoader && <PreLoader />}
+      <Router>
+        <div className="overflow-wrapper">
+          <div className="bg-[#082a90] min-h-screen">
+            <AnimatePresence>
+              {showNavbar && <Navbar key="navbar" />}
+              <Hero key="hero" />
+              <About key="about" />
+              <Projects key="projects" />
+              <Skills key="skills" />
+              <Footer key="footer" />
+            </AnimatePresence>
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
     </>
   );
 };
