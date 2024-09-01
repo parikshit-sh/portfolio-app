@@ -523,12 +523,3 @@ width: 80%;
   }
 
 
-  .site-content {
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.0\2s ease-in-out;
-  }
-  .site-content.visible {
-    visibility: visible;
-    opacity: 1;
-  }

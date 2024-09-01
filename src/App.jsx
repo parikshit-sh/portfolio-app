@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { AnimatePresence } from "framer-motion";
-import PageReveal from "./components/PageReveal";
+import PreLoader from "./components/Preloader";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Lenis from "@studio-freight/lenis";
@@ -11,28 +11,25 @@ import Footer from "./components/Footer";
 import Skills from "./components/Skill";
 
 const App = () => {
-  const [showPageReveal, setShowPageReveal] = useState(false);
+  const [showPreLoader, setShowPreLoader] = useState(true);
   const [showNavbar, setShowNavbar] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const screenWidth = window.innerWidth;
 
-   
     if (screenWidth <= 800) {
       setIsMobile(true);
       setShowNavbar(true); 
     } else {
-      setShowPageReveal(true);
+      setShowPreLoader(true);
     }
 
-    
     if (screenWidth > 1024) {
       const lenis = new Lenis({
         smooth: true,
       });
 
-      
       const update = (time) => {
         lenis.raf(time);
         requestAnimationFrame(update);
@@ -47,32 +44,23 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    if (!isMobile && showPageReveal) {
+    if (!isMobile && showPreLoader) {
       const timer = setTimeout(() => {
-        setShowPageReveal(false);
+        setShowPreLoader(false);
         setShowNavbar(true);
-      }, 2000); 
+      }, 1000); 
 
       return () => clearTimeout(timer);
     }
-  }, [isMobile, showPageReveal]);
-
-  const handlePageRevealComplete = () => {
-    setShowPageReveal(false);
-    setShowNavbar(true);
-  };
+  },);
 
   return (
+    <>
+    <PreLoader />
     <Router>
       <div className="overflow-wrapper">
         <div className="bg-[#082a90] min-h-screen">
           <AnimatePresence>
-            {!isMobile && showPageReveal && (
-              <PageReveal
-                key="page-reveal"
-                onComplete={handlePageRevealComplete}
-              />
-            )}
             {showNavbar && <Navbar key="navbar" />}
             <Hero key="hero" />
             <About key="about" />
@@ -83,6 +71,7 @@ const App = () => {
         </div>
       </div>
     </Router>
+    </>
   );
 };
 
