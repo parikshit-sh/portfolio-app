@@ -86,7 +86,7 @@ const Projects = () => {
                     {project.title}
                   </h1>
 
-                  <p className="text-lg text-gray-300 mb-4">
+                  <p className="p-des text-lg text-gray-200 mb-4">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -122,7 +122,7 @@ const Projects = () => {
                   <a
                     href={project.liveLink}
                     target="_blank"
-                    className="btn flex items-center mt-4 text--600 hover:no-underline sm:justify-center"
+                    className="btn mt-4 w-full hover:no-underline flex items-center justify-center"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

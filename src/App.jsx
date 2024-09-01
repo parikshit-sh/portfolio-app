@@ -57,7 +57,7 @@ const App = () => {
       {!isMobile && showPreLoader && <PreLoader />}
       <Router>
         <div className="overflow-wrapper">
-          <div className="bg-[#082a90] min-h-screen">
+          <div className="bg-[#121212] min-h-screen">
             <AnimatePresence>
               {showNavbar && <Navbar key="navbar" />}
               <Hero key="hero" />

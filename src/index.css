@@ -144,9 +144,8 @@ text-decoration: none;
   color: #FAF9F6;
 }
 
-/* index.css */
 .page-reveal {
-  background-color: #fff; /* Or any color/image */
+  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -301,14 +300,14 @@ font-family: 'Alagard', sans-serif;
 }
 
 .about-head {
-  text-align: left;
+  text-align: center;
   max-width: 63.55%;
   padding-bottom: 69px;
   margin: 0 auto;
 }
 
 .about-text {
-  color: #fffff;
+  color: #ffffff;
 
 }
 
@@ -321,12 +320,14 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .about-head {
-    text-align: center;
-  }
+
 
   .about-text {
     text-align: center;
+    font-size: 1.1rem;
+  }
+  .p-des{
+    font-size: 1rem;
   }
 }
 
@@ -389,7 +390,9 @@ a:hover {
     pointer-events: none;
   }
   
-  
+.about-text{
+  font-size: 0.9rem;
+}
 
   .project-card img {
     height: full;
@@ -479,6 +482,8 @@ width: 80%;
   .icon-img img{
     flex: 1 1 30%;
   }
+
+
 }
 
 @media (min-width: 480px) {
@@ -489,10 +494,7 @@ width: 80%;
 }
 @media (max-width: 344px) {
   .about-head {
-   font-size: 1.2rem;
-  }
-  .hero{
-    
+   font-size: 1.5rem;
   }
 
 }
@@ -514,12 +516,23 @@ width: 80%;
   
 }
 
-
-@media (max-width: 824px) {
-
-.buttons{
-  font-size: 0.7em;
+    .about-text {
+  line-height: 1.75rem; 
+  font-weight: 400;
+  color: #FAF2F6; 
+  letter-spacing: 0.5px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-  }
 
+.about-text:hover {
+  transform: translateY(-5px);
+}
 
+.about-head {
+  font-size: 1.9rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  color: #FAF2F6;
+}
