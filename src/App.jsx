@@ -18,21 +18,21 @@ const App = () => {
   useEffect(() => {
     const screenWidth = window.innerWidth;
 
-    // Determine if the device is mobile
+   
     if (screenWidth <= 800) {
       setIsMobile(true);
-      setShowNavbar(true); // Directly show the navbar on mobile devices
+      setShowNavbar(true); 
     } else {
       setShowPageReveal(true);
     }
 
-    // Initialize Lenis only if the screen width is greater than 1024px
+    
     if (screenWidth > 1024) {
       const lenis = new Lenis({
         smooth: true,
       });
 
-      // Update Lenis on scroll
+      
       const update = (time) => {
         lenis.raf(time);
         requestAnimationFrame(update);
@@ -48,11 +48,10 @@ const App = () => {
 
   useEffect(() => {
     if (!isMobile && showPageReveal) {
-      // Trigger the page reveal animation and then show the navbar
       const timer = setTimeout(() => {
         setShowPageReveal(false);
         setShowNavbar(true);
-      }, 2000); // Duration of the PageReveal animation
+      }, 2000); 
 
       return () => clearTimeout(timer);
     }
@@ -66,7 +65,7 @@ const App = () => {
   return (
     <Router>
       <div className="overflow-wrapper">
-        <div className="bg-[#191970] min-h-screen">
+        <div className="bg-[#042ca2] min-h-screen">
           <AnimatePresence>
             {!isMobile && showPageReveal && (
               <PageReveal
