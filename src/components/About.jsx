@@ -23,7 +23,7 @@ const About = () => {
           <a
             href="mailto:parikshit.p550@gmail.com?subject=Work Inquiry"
             className="btns inline-block text-lg bg-[#FAF2F6] border-2
-             border-[#ffffff] text-[#121212] py-3 px-8 hover:bg-[#121212] hover:text-[#FAF2F6] rounded-full 
+             border-[#ffffff] text-[#121212] py-3 px-8 hover:bg-transparent hover:text-[#FAF2F6] rounded-full 
             transition-all duration-300 ease-in-out hover:no-underline w-52 text-center"
           >
             Contact
@@ -31,7 +31,7 @@ const About = () => {
           <a
             href="#"
             className="btns inline-block text-lg bg-[#FAF2F6] border-2
-             border-[#ffffff] text-[#121212] py-3 px-8 hover:bg-[#121212]
+             border-[#ffffff] text-[#121212] py-3 px-8 hover:bg-transparent
               hover:text-[#FAF2F6] rounded-full transition-all duration-300 
               ease-in-out hover:no-underline w-52 text-center"
           >

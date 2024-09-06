@@ -19,7 +19,6 @@ const projects = [
 
 const Projects = () => {
   useEffect(() => {
-    // GSAP animation for hover effect
     const cards = document.querySelectorAll(".project-card");
     const buttons = document.querySelectorAll(".btn");
 

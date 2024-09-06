@@ -14,13 +14,10 @@ body {
 }
 
 .about-me {
-  background-color: #121212;
+  background-color: #000080;
   color: #FAF9F6;
 }
 
-.page-reveal {
-  background-color: #f6f7fa;
-}
 
 .hero-content h1, .hero-content h2, .hero-content h3 {
   margin: 0;
