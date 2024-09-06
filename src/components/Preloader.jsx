@@ -38,7 +38,8 @@ const Preloader = ({ setShowPreLoader, setShowNavbar }) => {
     <div className="preloader flex flex-col">
       
      <div className="preloader-curved flex justify-center text-center text-9xl">
-      <h1 className="text9xl"><span className="italic text-9xl font-serif text-[#000080]">welcome</span></h1>
+      <h1 className="text9xl"><span className="title text-9xl font-serif text-[#000080]">
+        welcome</span></h1>
      </div>
      
 
