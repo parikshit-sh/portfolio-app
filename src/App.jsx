@@ -44,7 +44,7 @@ const App = () => {
       const timer = setTimeout(() => {
         setShowPreLoader(false);
         setShowNavbar(true);
-      }, 1000); 
+      }, 2000); 
 
       return () => clearTimeout(timer);
     } else {
