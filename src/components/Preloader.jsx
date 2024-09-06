@@ -16,6 +16,7 @@ const Preloader = ({ setShowPreLoader, setShowNavbar }) => {
       duration: 0.6,
       ease: "power1.inOut", 
       y: "-100%",
+      delay:0.2
     })
 
 
