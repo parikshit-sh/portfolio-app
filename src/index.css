@@ -33,8 +33,8 @@ body {
 }
 
 @font-face {
-  font-family: 'Stardom';
-  src: url('./assets/font/Stardom-Regular.woff2') format('woff2');
+  font-family: 'adon';
+  src: url('./assets/font/adon.woff2') format('woff2');
   font-weight: 700;
 }
 @font-face {
@@ -47,12 +47,17 @@ body {
   src: url('./assets/font/alsscrp.woff2') format('woff2');
   font-weight: 700;
 }
+@font-face {
+  font-family: 'a25';
+  src: url('./assets/font/a25-squanova.woff2') format('woff2');
+  font-weight: 700;
+}
 
 
 
 .hero {
   background-color: transparent;
-  font-family: 'Stardom', sans-serif;
+  font-family: 'adon', sans-serif;
   font-weight: 700;
   
 }
@@ -63,7 +68,7 @@ body {
   
 }
 .hero h1 {
-  font-family: 'Stardom', sans-serif;
+  font-family: 'adon', sans-serif;
   letter-spacing: -0.02em;
 }
 
@@ -199,7 +204,7 @@ text-decoration: none;
 
 @media (max-width: 344px) {
   .hero-content h1 {
-    font-size: 1.5rem;
+    font-size: 0.1rem;
   }
 
   .hero-content p {
@@ -209,15 +214,16 @@ text-decoration: none;
 
 @media (max-width: 640px) {
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 0.6rem;
+    
   }
 
   .hero-content p {
-    font-size: 0.9rem;
+    font-size: 0.2rem;
   }
   .dev{
     font-family: 'Alagard', sans-serif;
-    font-size: 2rem;
+    font-size: 1rem;
    
   }
 }
@@ -235,7 +241,7 @@ text-decoration: none;
 
 @media (min-width: 768px) {
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
 
@@ -246,17 +252,26 @@ text-decoration: none;
 
 @media (min-width: 1024px) {
   .hero-content h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   
   .hero-content p {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+  
+  .hero-content p {
+    font-size: 0.9rem;
   }
 }
 
 @media (min-width: 1440px) {
   .hero-content h1 {
-    font-size: 4.5rem;
+    font-size: 3.7rem;
   }
   
   .hero-content p {
@@ -302,7 +317,7 @@ font-family: 'Alagard', sans-serif;
 .about-head {
   text-align: center;
   max-width: 63.55%;
-  padding-bottom: 69px;
+  padding-bottom: 2px;
   margin: 0 auto;
 }
 
@@ -482,7 +497,13 @@ width: 80%;
   .icon-img img{
     flex: 1 1 30%;
   }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
 
+  .hero-content p {
+    font-size: 0.9rem;
+  }
 
 }
 

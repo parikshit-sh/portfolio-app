@@ -8,7 +8,7 @@ const Skills = () => {
         <h2 className="about-head text-4xl mb-8 text-center uppercase no-select">
           Technologies I&apos;ve Worked With
         </h2>
-        <div className="icon-img flex flex-wrap justify-center gap-4">
+        <div className="icon-img flex flex-wrap justify-center gap-4 pt-8">
           <div className="flex items-center">
             <img
               src="https://skillicons.dev/icons?i=html,css"

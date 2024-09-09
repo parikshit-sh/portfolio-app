@@ -68,7 +68,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section className="projects-section py-16" id="projects_">
+    <section className="projects-section py-16 mt-" id="projects_">
       <div className="max-w-5xl mx-auto">
         <h1 className="about-head text-4xl mb-12 uppercase no-select" id="prod">
           Projects
@@ -77,7 +77,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="project-card bg-transparent border-white border-b rounded-lg rounded-b-none hover:shadow-lg overflow-hidden transition-transform transform hover:scale-105 flex flex-col lg:flex-row items-center"
+              className="project-card bg-transparent border-white rounded-lg rounded-b-none hover:shadow-lg overflow-hidden transition-transform transform hover:scale-105 flex flex-col lg:flex-row items-center"
             >
               <div className="p-6 flex-1 flex flex-col justify-between w-full text-white">
                 <div>

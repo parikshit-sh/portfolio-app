@@ -11,7 +11,7 @@ const About = () => {
         <div className="flex justify-center">
           <div className="w-full lg:w-10/12 p-6">
             <p className="about-text text-xl leading-relaxed text-center">
-              Hi, I’m Parikshit, a passionate Front-End Developer dedicated to
+              Hi, I’m Parikshit, a passionate Web Developer dedicated to
               crafting exceptional digital experiences. With a solid background
               in front-end technologies like ReactJS, JavaScript, TailwindCSS,
               and a keen eye for design, I specialize in turning complex ideas
@@ -23,16 +23,16 @@ const About = () => {
           <a
             href="mailto:parikshit.p550@gmail.com?subject=Work Inquiry"
             className="btns inline-block text-lg bg-[#FAF2F6] border-2
-             border-[#ffffff] text-[#121212] py-3 px-8 hover:bg-transparent hover:text-[#FAF2F6] rounded-full 
+             border-[#ffffff] text-[#121212] py-3 px-8 hover:bg-transparent hover:text-white rounded-full 
             transition-all duration-300 ease-in-out hover:no-underline w-52 text-center"
           >
             Contact
           </a>
           <a
             href="#"
-            className="btns inline-block text-lg bg-[#FAF2F6] border-2
-             border-[#ffffff] text-[#121212] py-3 px-8 hover:bg-transparent
-              hover:text-[#FAF2F6] rounded-full transition-all duration-300 
+            className="btns inline-block text-lg bg-transparent border-2
+             border-[#ffffff] text-white py-3 px-8 hover:bg-white
+              hover:text-black rounded-full transition-all duration-300 
               ease-in-out hover:no-underline w-52 text-center"
           >
             Resume
