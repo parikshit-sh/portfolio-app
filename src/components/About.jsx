@@ -22,8 +22,8 @@ const About = () => {
         <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-6">
           <a
             href="mailto:parikshit.p550@gmail.com?subject=Work Inquiry"
-            className="btns inline-block text-lg bg-[#FAF2F6] border-2
-             border-[#ffffff] text-[#121212] py-3 px-8 hover:bg-transparent hover:text-white rounded-full 
+            className="btns inline-block text-lg bg-black border-2
+              text-white py-3 px-8 hover:bg-transparent hover:text-black hover:border-black rounded-full 
             transition-all duration-300 ease-in-out hover:no-underline w-52 text-center"
           >
             Contact
@@ -31,8 +31,8 @@ const About = () => {
           <a
             href="#"
             className="btns inline-block text-lg bg-transparent border-2
-             border-[#ffffff] text-white py-3 px-8 hover:bg-white
-              hover:text-black rounded-full transition-all duration-300 
+             border-black text-black py-3 px-8 hover:bg-black
+              hover:text-white rounded-full transition-all duration-300 
               ease-in-out hover:no-underline w-52 text-center"
           >
             Resume

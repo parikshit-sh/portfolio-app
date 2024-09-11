@@ -77,15 +77,15 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="project-card bg-transparent border-white rounded-lg rounded-b-none hover:shadow-lg overflow-hidden transition-transform transform hover:scale-105 flex flex-col lg:flex-row items-center"
+              className="project-card bg-transparent border-white rounded-lg rounded-b-none overflow-hidden transition-transform transform hover:scale-105 flex flex-col lg:flex-row items-center"
             >
-              <div className="p-6 flex-1 flex flex-col justify-between w-full text-white">
+              <div className="p-6 flex-1 flex flex-col justify-between w-full text-black">
                 <div>
-                  <h1 className="pTitle text-white text-7xl pb-4 lg:text-7xl select-none">
+                  <h1 className="pTitle text-black text-7xl pb-4 lg:text-7xl select-none">
                     {project.title}
                   </h1>
 
-                  <p className="p-des text-lg text-gray-200 mb-4">
+                  <p className="p-des text-lg text-gray-700 mb-4">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -108,7 +108,7 @@ const Projects = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className=""
-                      fill="#ffffff"
+                      fill="black"
                       viewBox="0 0 30 30"
                       width="30px"
                       height="30px"
@@ -125,7 +125,7 @@ const Projects = () => {
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      fill="#ffffff"
+                      fill="#black"
                       width="25"
                       height="25"
                       viewBox="0 0 50 50"

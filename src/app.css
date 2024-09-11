@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: #121212; 
+  background-color: #FAF9F6; 
 }
 
 .hero {
@@ -14,13 +14,13 @@ body {
 }
 
 .about-me {
-  background-color: #121212;
-  color: #FAF9F6;
+  background-color: transparent;
+  color: black;
 }
 
 
 .hero-content h1, .hero-content h2, .hero-content h3 {
   margin: 0;
   line-height: 0.9;
-  color: white;
+  color: black;
 }
