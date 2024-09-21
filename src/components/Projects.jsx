@@ -14,7 +14,19 @@ const projects = [
     techUsed: ["NextJS", "TailwindCSS", "CoinGeckoAPI"],
     link: "https://github.com/parikshit-sh/token-stats-crypto",
     liveLink: "https://tokenstats.vercel.app/",
+  },  {
+    title: "Rentals",
+    id: "02",
+    description:
+      "Rentals is a modern electronic car rental platform that offers a seamless user experience. Enjoy an intuitive design that adapts to all devices, allowing users to easily browse and reserve their ideal vehicle with minimal effort.",
+    images: [
+      "https://i.postimg.cc/FRdNR4XB/Rentals.png",
+    ],
+    techUsed: ["ReactJS", "TailwindCSS"],
+    link: "https://github.com/parikshit-sh/car-rental",
+    liveLink: "https://rentals-rust.vercel.app/",
   },
+
 ];
 
 const Projects = () => {
@@ -79,9 +91,9 @@ const Projects = () => {
               key={index}
               className="project-card bg-transparent border-white rounded-lg rounded-b-none overflow-hidden transition-transform transform hover:scale-105 flex flex-col lg:flex-row items-center"
             >
-              <div className="p-6 flex-1 flex flex-col justify-between w-full text-black">
+              <div className="p-10 lg:p-6 flex-1 flex flex-col justify-between w-full text-black">
                 <div>
-                  <h1 className="pTitle text-black text-7xl pb-4 lg:text-7xl select-none">
+                  <h1 className="pTitle text-black text-5xl pb-4 lg:text-7xl select-none">
                     {project.title}
                   </h1>
 
