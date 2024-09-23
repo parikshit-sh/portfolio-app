@@ -187,7 +187,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="navbar-link relative">
-              <a href="#prod" className="">
+              <a href="https://parikshit-blog.vercel.app/" className="">
                 Blog
               </a>
             </li>
@@ -253,7 +253,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#prod" target="_blank" onClick={closeMenu}>
+            <a href="https://parikshit-blog.vercel.app/" target="_blank" onClick={closeMenu}>
               Blog
             </a>
           </li>

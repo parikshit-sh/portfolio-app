@@ -91,7 +91,7 @@ const Projects = () => {
               key={index}
               className="project-card bg-transparent border-white rounded-lg rounded-b-none overflow-hidden transition-transform transform hover:scale-105 flex flex-col lg:flex-row items-center"
             >
-              <div className="p-10 lg:p-6 flex-1 flex flex-col justify-between w-full text-black">
+              <div className="p-10 lg:p-6  flex-1 flex flex-col justify-between w-full text-black">
                 <div>
                   <h1 className="pTitle text-black text-5xl pb-4 lg:text-7xl select-none">
                     {project.title}
