@@ -180,7 +180,7 @@ text-decoration: none;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .hero-content p {
@@ -190,10 +190,6 @@ text-decoration: none;
 .hero {
   background-size: cover;
   background-position: center;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
 }
 
 .hero-content p {
@@ -251,7 +247,7 @@ text-decoration: none;
 
 @media (min-width: 1024px) {
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   
   .hero-content p {
@@ -260,7 +256,7 @@ text-decoration: none;
 }
 @media (max-width: 1024px) {
   .hero-content h1 {
-    font-size: 2.4rem;
+    font-size: 4rem;
   }
   
   .hero-content p {
@@ -270,7 +266,7 @@ text-decoration: none;
 
 @media (min-width: 1440px) {
   .hero-content h1 {
-    font-size: 3.7rem;
+    font-size: 5rem;
   }
   
   .hero-content p {

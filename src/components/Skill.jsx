@@ -6,7 +6,7 @@ const Skills = () => {
     <section className="icons bg-transparent text-[#FAF9F6]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8"> 
         <h2 className="about-head text-4xl mb-8 text-center uppercase no-select">
-          Technologies I&apos;ve Worked With
+          
         </h2>
         <div className="icon-img flex flex-wrap justify-center gap-4 pt-8">
           <div className="flex items-center">
