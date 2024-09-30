@@ -69,6 +69,7 @@ body {
 .hero h1 {
   font-family: 'astra';
   letter-spacing: -0.03em;
+  font-size: 6vw;
  
 }
 
@@ -149,12 +150,9 @@ text-decoration: none;
   color: black;
 }
 
-.hero-content h1 {
-  font-size: 4rem;
-}
 
 .hero-content h2 {
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .hero-content h3 {
@@ -166,9 +164,7 @@ text-decoration: none;
   background-position: center;
 }
 
-.hero-content h1 {
-  font-size: 6vw;
-}
+
 
 .hero {
   background-size: cover;
@@ -181,6 +177,9 @@ text-decoration: none;
 
 
 @media (max-width: 344px) {
+  .hero-content h1 {
+    font-size: 0.1rem;
+  }
 
   .hero-content p {
     font-size: 0.7rem;
@@ -188,7 +187,6 @@ text-decoration: none;
 }
 
 @media (max-width: 640px) {
-
 
   .hero-content p {
     font-size: 0.2rem;
@@ -201,6 +199,9 @@ text-decoration: none;
 }
 
 @media (max-width: 494px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
 
   .hero-content p {
     font-size: 0.8rem;
@@ -211,7 +212,6 @@ text-decoration: none;
 @media (min-width: 768px) {
 
 
-
   .hero-content p {
     font-size: 1rem;
   }
@@ -219,19 +219,24 @@ text-decoration: none;
 
 @media (min-width: 1024px) {
 
+  
   .hero-content p {
     font-size: 0.9rem;
   }
 }
 @media (max-width: 1024px) {
 
+  
   .hero-content p {
     font-size: 0.9rem;
   }
 }
 
 @media (min-width: 1440px) {
-
+  .hero-content h1 {
+    font-size: 6vw;
+  }
+  
   .hero-content p {
     font-size: 1.2rem;
   }
@@ -455,7 +460,9 @@ width: 80%;
   .icon-img img{
     flex: 1 1 30%;
   }
-
+  .hero-content h1 {
+    font-size: 2rem;
+  }
 
   .hero-content p {
     font-size: 0.9rem;
