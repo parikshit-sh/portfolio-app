@@ -56,8 +56,8 @@ body {
 }
 .hero h1 {
   font-family: 'almond';
-  letter-spacing: -0.07em;
-  font-size: 6vw;
+  letter-spacing: -0.04em;
+  font-size: 7vw;
 
  
 }
@@ -158,9 +158,6 @@ text-decoration: none;
 
 
 @media (max-width: 344px) {
-  .hero-content h1 {
-    font-size: 0.1rem;
-  }
 
   .hero-content p {
     font-size: 0.7rem;
@@ -168,7 +165,9 @@ text-decoration: none;
 }
 
 @media (max-width: 640px) {
-
+  .hero-content h1{
+    font-size: 7vw;
+  }
   .hero-content p {
     font-size: 0.2rem;
   }
@@ -180,44 +179,39 @@ text-decoration: none;
 }
 
 @media (max-width: 494px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
 
+  .hero-content h1{
+    font-size: 7vw;
+  }
   .hero-content p {
     font-size: 0.8rem;
   }
 
 }
 
-@media (min-width: 768px) {
-
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-}
 
 @media (min-width: 1024px) {
-
-  
+  .hero-content h1{
+    font-size: 7vw;
+  }
   .hero-content p {
     font-size: 0.9rem;
   }
 }
 @media (max-width: 1024px) {
-
-  
+  .hero-content h1{
+    font-size: 7vw;
+  }
   .hero-content p {
     font-size: 0.9rem;
   }
 }
 
 @media (min-width: 1440px) {
-  .hero-content h1 {
+
+  .hero-content h1{
     font-size: 7vw;
   }
-  
   .hero-content p {
     font-size: 1.2rem;
   }
@@ -382,15 +376,6 @@ a:hover {
 }
 
 
-
-@media (max-width:480px) {
-  .dev{
-    font-family: 'Alagard', sans-serif;
-    font-size: 3rem;
-   
-  }
-}
-
 .btn {
 display: flex;
 width: 80%;
@@ -439,7 +424,7 @@ width: 80%;
     flex: 1 1 30%;
   }
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 9vw;
   }
 
   .hero-content p {
