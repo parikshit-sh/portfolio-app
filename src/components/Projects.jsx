@@ -154,7 +154,6 @@ const Projects = () => {
                   <img
                     key={imgIndex}
                     srcSet={image}
-                    loading="lazy"
                     alt={`${project.title} Image ${imgIndex + 1}`}
                     className="w-full h-auto object-cover rounded-md mb-4 lg:mb-2 md:mx-auto"
                   />

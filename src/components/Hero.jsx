@@ -41,7 +41,7 @@ const Hero = () => {
             FRONT END DEVELOPER
           </h1>
           <h1 className="text-xl md:text-xl lg:text-3xl xl:text-4xl tracking-tighter uppercase">
-            Folio<span className="copyright">&copy;</span>2024❅
+            Folio<span className="copyright">&copy;</span>2024✶
           </h1>
           <p className="tracking-tighter pt-4 font-mono text-xs md:text-xs lg:text-base px-5">
             turning ideas into dynamic digital experiences.
