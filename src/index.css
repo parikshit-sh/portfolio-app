@@ -33,7 +33,7 @@ body {
 }
 
 @font-face {
-  font-family: 'astra';
+  font-family: 'almond';
   src: url('./assets/font/almondy-regular.woff2') format('woff2');
   font-weight: 700;
 }
@@ -42,21 +42,10 @@ body {
   src: url('./assets/font/almondy-italic.woff2') format('woff2');
   font-weight: 700;
 }
-@font-face {
-  font-family: 'alsscrp';
-  src: url('./assets/font/alsscrp.woff2') format('woff2');
-  font-weight: 700;
-}
-@font-face {
-  font-family: 'a25';
-  src: url('./assets/font/a25-squanova.woff2') format('woff2');
-  font-weight: 700;
-}
 
 
 .hero {
   background-color: transparent;
-  font-family: 'a25', sans-serif;
   font-weight: 700;
   
 }
@@ -66,7 +55,7 @@ body {
   
 }
 .hero h1 {
-  font-family: 'astra';
+  font-family: 'almond';
   letter-spacing: -0.07em;
   font-size: 6vw;
 
@@ -245,13 +234,9 @@ text-decoration: none;
   font-weight: 100;
 }
 .copyright{
-font-family: 'Alagard', sans-serif;
+font-family: 'almond';
 }
-.dev{
-  font-family: 'Alagard', sans-serif;
-  font-size: 5.5rem;
- 
-}
+
 .folio-head{
   font-size:2rem;
 }
@@ -349,6 +334,7 @@ a:hover {
 .project-card h2,
 .project-card p {
   margin: 0;
+
 }
 
 @media (max-width: 768px) {
