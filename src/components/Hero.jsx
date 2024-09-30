@@ -34,8 +34,8 @@ const Hero = () => {
       <section className="hero no-select bg-cover bg-center h-screen flex items-center justify-center text-center text-black relative pt-20">
         <div className="hero-content max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-6xl relative z-10">
           <h1 className="hero-name text-2xl md:text-3xl lg:text-5xl xl:text-6xl sm:text-2xl tracking-tighter text-center">
-            <span className="cursive font-bold italic px-1">P</span>ARIKSHIT{" "}
-            <span className="cursive font-bold italic px-1">S</span>HARMA
+          PARIKSHIT{" "}
+          SHARMA
           </h1>
           <h1 className="hero-head text-xl md:text-2xl lg:text-4xl xl:text-4xl tracking-tighter uppercase p-2">
             FRONT END Developer

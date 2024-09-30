@@ -33,8 +33,8 @@ body {
 }
 
 @font-face {
-  font-family: 'adon';
-  src: url('./assets/font/adon.woff2') format('woff2');
+  font-family: 'astra';
+  src: url('./assets/font/astralaga-regular.woff2') format('woff2');
   font-weight: 700;
 }
 @font-face {
@@ -67,8 +67,9 @@ body {
   
 }
 .hero h1 {
-  font-family: 'a25', sans-serif;
-  letter-spacing: -0.02em;
+  font-family: 'astra';
+  letter-spacing: -0.03em;
+ 
 }
 
 .hero p {
@@ -148,20 +149,6 @@ text-decoration: none;
   color: black;
 }
 
-.page-reveal {
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 50;
-  opacity: 1;
-  visibility: visible;
-}
-
-
-
 .hero-content h1 {
   font-size: 4rem;
 }
@@ -180,11 +167,7 @@ text-decoration: none;
 }
 
 .hero-content h1 {
-  font-size: 5rem;
-}
-
-.hero-content p {
-  font-size: 1rem;
+  font-size: 6vw;
 }
 
 .hero {
@@ -198,9 +181,6 @@ text-decoration: none;
 
 
 @media (max-width: 344px) {
-  .hero-content h1 {
-    font-size: 0.1rem;
-  }
 
   .hero-content p {
     font-size: 0.7rem;
@@ -208,10 +188,7 @@ text-decoration: none;
 }
 
 @media (max-width: 640px) {
-  .hero-content h1 {
-    font-size: 0.6rem;
-    
-  }
+
 
   .hero-content p {
     font-size: 0.2rem;
@@ -224,9 +201,6 @@ text-decoration: none;
 }
 
 @media (max-width: 494px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
 
   .hero-content p {
     font-size: 0.8rem;
@@ -235,9 +209,7 @@ text-decoration: none;
 }
 
 @media (min-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.8rem;
-  }
+
 
 
   .hero-content p {
@@ -246,29 +218,20 @@ text-decoration: none;
 }
 
 @media (min-width: 1024px) {
-  .hero-content h1 {
-    font-size: 4rem;
-  }
-  
+
   .hero-content p {
     font-size: 0.9rem;
   }
 }
 @media (max-width: 1024px) {
-  .hero-content h1 {
-    font-size: 4rem;
-  }
-  
+
   .hero-content p {
     font-size: 0.9rem;
   }
 }
 
 @media (min-width: 1440px) {
-  .hero-content h1 {
-    font-size: 5rem;
-  }
-  
+
   .hero-content p {
     font-size: 1.2rem;
   }
@@ -492,9 +455,7 @@ width: 80%;
   .icon-img img{
     flex: 1 1 30%;
   }
-  .hero-content h1 {
-    font-size: 2rem;
-  }
+
 
   .hero-content p {
     font-size: 0.9rem;
