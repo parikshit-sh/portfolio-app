@@ -34,12 +34,12 @@ body {
 
 @font-face {
   font-family: 'astra';
-  src: url('./assets/font/astralaga-regular.woff2') format('woff2');
+  src: url('./assets/font/almondy-regular.woff2') format('woff2');
   font-weight: 700;
 }
 @font-face {
-  font-family: 'Alagard';
-  src: url('./assets/font/arpegius.woff2') format('woff2');
+  font-family: 'italic';
+  src: url('./assets/font/almondy-italic.woff2') format('woff2');
   font-weight: 700;
 }
 @font-face {
@@ -62,14 +62,14 @@ body {
 }
 
 .cursive{
-  font-family: "Adon", sans-serif;
-  font-size: 160%;
+  font-family: "italic";
   
 }
 .hero h1 {
   font-family: 'astra';
-  letter-spacing: -0.03em;
+  letter-spacing: -0.07em;
   font-size: 6vw;
+
  
 }
 
@@ -151,14 +151,6 @@ text-decoration: none;
 }
 
 
-.hero-content h2 {
-  font-size: 2rem;
-}
-
-.hero-content h3 {
-  font-size: 1.25rem;
-}
-
 .hero {
   background-size: cover;
   background-position: center;
@@ -234,7 +226,7 @@ text-decoration: none;
 
 @media (min-width: 1440px) {
   .hero-content h1 {
-    font-size: 6vw;
+    font-size: 7vw;
   }
   
   .hero-content p {
