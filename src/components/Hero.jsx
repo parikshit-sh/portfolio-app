@@ -15,13 +15,13 @@ const Hero = () => {
       },
       {
         opacity: 0, 
-        y: -50,
+        y: -2,
         scrollTrigger: {
           trigger: ".hero",
           start: "top top", 
           end: "+=500", 
           scrub: true, 
-          pin: false,
+          pin: true,
           markers: false, 
           onLeaveBack: () => heroAnimation.progress(0), 
         },
@@ -30,17 +30,21 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="sticky">
-      <section className="hero no-select bg-cover bg-center h-screen flex items-center justify-center text-center text-black relative pt-20">
-        <div className="hero-content max-w-full relative z-10">
-          <h1 className="hero-name text-2xl md:text-3xl lg:text-5xl xl:text-6xl sm:text-2xl tracking-tighter text-center">
+    <div className="fixed inset-0 flex items-center justify-center overflow-hidden">
+      <section className="hero no-select 
+      bg-cover bg-center h-screen w-screen flex items-center justify-center text-center ">
+        <div className="hero-content max-w-full z-10 w-full px-4 mx-auto">
+          <h1 className="hero-name text-2xl md:text-3xl lg:text-5xl
+           xl:text-6xl sm:text-2xl tracking-tighter text-center">
           <span className="cursive">P</span>ARIKSHIT{" "}
           <span className="cursive">S</span>HARMA
           </h1>
-          <h1 className="hero-head text-xl md:text-2xl lg:text-4xl xl:text-4xl tracking-tighter uppercase p-2">
+          <h1 className="hero-head text-xl md:text-2xl lg:text-4xl 
+          xl:text-4xl tracking-tighter uppercase p-2">
             FRONT END DEVELOPER
           </h1>
-          <h1 className="text-xl md:text-xl lg:text-3xl xl:text-4xl tracking-tighter uppercase">
+          <h1 className="text-xl md:text-xl lg:text-3xl xl:text-4xl
+           tracking-tighter uppercase">
             Folio<span className="copyright">&copy;</span>2024𖤓
           </h1>
           <p className="tracking-tighter pt-4 font-mono text-xs md:text-xs lg:text-base px-5">

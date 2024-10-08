@@ -8,7 +8,6 @@ import About from "./components/About";
 import Lenis from "@studio-freight/lenis";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-import Skills from "./components/Skill";
 
 const App = () => {
   const [showPreLoader, setShowPreLoader] = useState(true);
@@ -65,7 +64,6 @@ const App = () => {
               <Hero key="hero" />
               <About key="about" />
               <Projects key="projects" />
-              <Skills key="skills" />
               <Footer key="footer" />
             </AnimatePresence>
           </div>

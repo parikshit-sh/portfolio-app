@@ -16,7 +16,6 @@ body {
   overflow-x: hidden;
 }
 .hero {
-  position: sticky;
   top: 0;
   z-index: 1;
 }
@@ -288,12 +287,16 @@ a:hover {
   z-index: 1
 }
 
-.no-select{
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -webkit-user-drag: none;
+
+.projects-section{
+  position: relative;
+  z-index: 2;
 }
+
+.hero {
+  z-index: 1;
+}
+
 
 .projects-section{
   cursor: pointer;
@@ -336,10 +339,7 @@ a:hover {
     max-width: 100%;
     
   }
-  .no-select {
-    pointer-events: none;
-  }
-  
+
 .about-text{
   font-size: 0.9rem;
 }
@@ -396,11 +396,14 @@ width: 80%;
 
 
 .footer {
+  position: relative; /* or fixed/absolute based on your layout */
+  z-index: 10; /* Adjust this value */
   width: 100%;
   color: black;
   font-family: 'Inter', sans-serif;
   background-color: transparent;
 }
+
 
 .footer-text {
   letter-spacing: 2rem;
