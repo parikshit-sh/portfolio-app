@@ -18,6 +18,7 @@ const Navbar = () => {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   useEffect(() => {
     gsap.set(".navbar-link", { opacity: 0, y: 10 });
     gsap.set(".hamburg", { opacity: 0, y: 10 });
@@ -105,6 +106,7 @@ const Navbar = () => {
         duration: 0.3,
         ease: "power2.out",
       });
+      document.body.style.overflow = 'hidden';
     } else {
       gsap.to(".mobile-menu", {
         x: "100%",
@@ -116,6 +118,7 @@ const Navbar = () => {
         duration: 0.3,
         ease: "power2.out",
       });
+      document.body.style.overflow = 'auto';
     }
 
     const links = document.querySelectorAll(".mobile-menu a");
@@ -216,7 +219,7 @@ const Navbar = () => {
 
       <div className="mobile-menu-overlay fixed top-0 left-0 w-full h-full  opacity-0"></div>
       <div
-        className={`mobile-menu fixed top-0 right-0 w-3/4 h-full transform translate-x-full`}
+        className={`mobile-menu fixed top-0 right-0 w-3/4 h-full transform translate-x-full `}
       >
         <button
           className="absolute top-4 right-4"
@@ -264,4 +267,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
- 

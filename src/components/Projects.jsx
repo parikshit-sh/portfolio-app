@@ -42,15 +42,22 @@ const projects = [
 ];
 
 const Projects = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200);
   const [activeProject, setActiveProject] = useState(null);
   const projectRefs = useRef([]);
 
   useEffect(() => {
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1200);
+    }
+    window.addEventListener('resize', handleResize);
+
     if (activeProject !== null) {
       gsap.to(`#project-details-${activeProject}`, {
         height: "auto",
         opacity: 1,
-        duration: 0.5,
+        duration: 0.3,
         ease: "power2.out"
       });
     }
@@ -85,7 +92,7 @@ const Projects = () => {
       const mouseY = event.clientY - rect.top;
       const isFromTop = mouseY < rect.height / 2;
 
-      if (isEntering) {
+      if ( !isMobile && isEntering) {
         gsap.fromTo(
           projectElement,
           { 
@@ -96,17 +103,20 @@ const Projects = () => {
           {
             backgroundSize: "100% 100%",
             backgroundPosition: isFromTop ? "top" : "bottom",
-            duration: 0.3,
+            duration: 0.2,
+             color: "#effd92",
             ease: "power2.out",
-            color: "white"
+          
           }
         );
       } else {
         gsap.to(projectElement, {
           backgroundSize: "100% 0%",
+         
+          duration: 0.2,
+          ease: "power2.in",
           color: "black",
-          duration: 0.3,
-          ease: "power2.in"
+         
         });
       }
     
@@ -114,30 +124,32 @@ const Projects = () => {
 
   return (
     <section className="projects-section py-16 px-4" id="projects_">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h1 className="about-head text-4xl mb-12 uppercase" id="prod">
           Projects
         </h1>
-        <div className="flex flex-col gap-4 ">
+        <div className="flex flex-col gap-0 border-t border-zinc-900">
           {projects.map((project) => (
             <div key={project.id} className="project-container">
               <div 
                 ref={(el) => (projectRefs.current[project.id] = el)}
-                className="project-row cursor-pointer border-y border-zinc-900 flex justify-between items-center"
+                className={`project-row cursor-pointer border-b
+                   flex justify-between border-zinc-900 
+                  items-center px-4 text-black`}
                 onClick={() => handleProjectClick(project.id)}
                 onMouseEnter={(e) => handleProjectHover(project.id, true, e)}
                 onMouseLeave={(e) => handleProjectHover(project.id, false, e)}
               >
                 <h2 className="text-xl p-4">{project.title}</h2>
                 <div className="flex items-center gap-4">
-                  <div className="tech-used">
+                  <div className="tech-used hidden md:block">
                     {project.techUsed.map((tech, index) => (
                       <span key={index} className="text-sm rounded-full px-2 py-1 mr-2">
                         {tech}
                       </span>
                     ))}
                   </div>
-                  <span className="text-gray-500">{project.date}</span>
+                  <span className="">{project.date}</span>
                 </div>
               </div>
               <div 
@@ -152,7 +164,7 @@ const Projects = () => {
                       href={project.liveLink} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="rounded-full text-white bg-black px-4 py-2"
+                      className="rounded-full text-[#effd92] bg-black px-4 py-2"
                     >
                       See Website
                     </a>

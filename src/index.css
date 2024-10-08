@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
 
 .navbar-link,
 .hamburg {
@@ -15,10 +19,7 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
-.hero {
-  top: 0;
-  z-index: 1;
-}
+
 
 
 .overlay {
@@ -27,36 +28,53 @@ body {
   background: transparent
 }
 
-.hero-content {
-
-}
 
 @font-face {
-  font-family: 'almond';
-  src: url('./assets/font/gloriche-regular.woff2') format('woff2');
+  font-family: 'PPEditorial';
+  src: url('./assets/font/PPEditorial.woff2') format('woff2');
   font-weight: 700;
 }
 @font-face {
-  font-family: 'italic';
-  src: url('./assets/font/almondy-italic.woff2') format('woff2');
-  font-weight: 700;
+  font-family: 'PPMondwest';
+  src: url('./assets/font/PPMondwest-Regular.otf') format('opentype'); /* Specify the format */
+  font-weight: normal; /* Set the font weight */
+  font-style: normal; /* Set the font style */
+}
+
+body {
+  font-family: 'PPMondwest', serif; /* Use the custom font */
 }
 
 
 .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
   background-color: transparent;
-  font-weight: 700;
-  
+}
+.developer{
+  font-family: 'PPMondwest';
+  font-size: 7vw;
+
 }
 
+
 .cursive{
-  font-family: "italic";
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7vw;
+  
   
 }
 .hero h1 {
-  font-family: 'almond';
+  font-family: 'PPEditorial';
   letter-spacing: -0.04em;
-  font-size: 7vw;
+  font-size: 8vw;
+  
 
  
 }
@@ -102,6 +120,7 @@ body {
   transition: transform 0.2s ease-out;
   z-index: 1001;
 }
+
 .mobile-menu a{
 background-color: ;
 font-size: 2rem;
@@ -139,17 +158,6 @@ text-decoration: none;
 }
 
 
-.hero {
-  background-size: cover;
-  background-position: center;
-}
-
-
-
-.hero {
-  background-size: cover;
-  background-position: center;
-}
 
 .hero-content p {
   font-size: 1rem;
@@ -165,33 +173,31 @@ text-decoration: none;
 
 @media (max-width: 640px) {
   .hero-content h1{
-    font-size: 7vw;
+    font-size: 6vw;
   }
   .hero-content p {
     font-size: 0.2rem;
   }
-  .dev{
-    font-family: 'Alagard', sans-serif;
-    font-size: 1rem;
-   
-  }
+  
 }
+
 
 @media (max-width: 494px) {
 
   .hero-content h1{
-    font-size: 7vw;
+    font-size: 6vw;
   }
   .hero-content p {
     font-size: 0.8rem;
   }
+  
 
 }
 
 
 @media (min-width: 1024px) {
   .hero-content h1{
-    font-size: 7vw;
+    font-size: 6vw;
   }
   .hero-content p {
     font-size: 0.9rem;
@@ -199,7 +205,7 @@ text-decoration: none;
 }
 @media (max-width: 1024px) {
   .hero-content h1{
-    font-size: 7vw;
+    font-size: 6vw;
   }
   .hero-content p {
     font-size: 0.9rem;
@@ -209,13 +215,13 @@ text-decoration: none;
 @media (min-width: 1440px) {
 
   .hero-content h1{
-    font-size: 7vw;
+    font-size: 5vw;
   }
   .hero-content p {
     font-size: 1.2rem;
   }
-  .dev{
-    font-size: 5rem;
+  .developer{
+    font-size: 6vw;
   }
 }
 
@@ -226,9 +232,7 @@ text-decoration: none;
   font-family: 'Inter', sans-serif;
   font-weight: 100;
 }
-.copyright{
-font-family: 'almond';
-}
+
 
 .folio-head{
   font-size:2rem;
@@ -283,19 +287,19 @@ a:hover {
   margin: 0 auto; 
 }
 
-.hero-content{
-  z-index: 1
+.hero-content {
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
 }
-
 
 .projects-section{
   position: relative;
   z-index: 2;
 }
 
-.hero {
-  z-index: 1;
-}
+
 
 
 .projects-section{
@@ -305,28 +309,7 @@ a:hover {
   font-family: 'Inter', sans-serif;
 }
 
-.project-card {
-  width: 100%; 
-  max-width: 100%; 
-  height: auto; 
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  margin: 0 auto; 
-}
-.project-card img {
-  width: 100%; 
-  height: 200px; 
-  object-fit:contain;
-}
 
-.project-card-content {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
 .project-card h2,
 .project-card p {
@@ -427,11 +410,18 @@ width: 80%;
     flex: 1 1 30%;
   }
   .hero-content h1 {
-    font-size: 9vw;
+    font-size: 8vw !important; 
   }
 
   .hero-content p {
     font-size: 0.9rem;
+  }
+  .developer{
+    font-size: 10vw !important;
+  }
+  .cursive{
+    font-size: 10vw !important;
+    padding: 0.2rem;
   }
 
 }
