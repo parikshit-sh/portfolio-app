@@ -24,7 +24,7 @@ const Hero = () => {
 
   return (
     <motion.div className="hero-container" ref={heroRef} style={{ opacity }}>
-      <section className="hero pt-[20vh]">
+      <section className="hero lg:pt-[20vh]">
         <div className="hero-content">
           <h1 className="hero-name text-[3vw] sm:text-[3vw] md:text-[4vw] lg:text-[5vw] xl:text-[6vw] tracking-tighter text-center " style={{ fontSize: 'clamp(1rem, 6vw, 6rem)' }}>
             <span className="cursive p-[0.4vw]" style={{ fontSize: 'clamp(1rem, 8vw, 8rem)' }}>P</span>ARIKSHIT{" "}
