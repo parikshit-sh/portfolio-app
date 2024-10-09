@@ -167,7 +167,8 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="navbar text-sm uppercase bg-transparent text-black flex justify-between items-center p-4">
+      <header className="navbar text-sm uppercase 
+      bg-transparent text-black flex justify-between items-center p-4">
         <h1 className="text-sm uppercase navbar-link">Parikshit Sharma</h1>
         <nav className="hidden lg:flex">
           <ul className="flex space-x-6 no-underline">

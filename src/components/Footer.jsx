@@ -51,7 +51,9 @@ const Footer = () => {
             value={formData.from_name}
             onChange={handleChange}
             placeholder="Name"
-            className="w-full p-2 border-b bg-transparent border-black focus:outline-none uppercase text-xs" 
+            className="w-full p-2 border-b
+             bg-transparent border-black 
+             focus:outline-none placeholder:uppercase text-xs" 
             required
           />
           <input
@@ -60,7 +62,9 @@ const Footer = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="Email"
-            className="w-full p-2 border-b bg-transparent border-black focus:outline-none uppercase text-xs" 
+            className="w-full p-2 border-b autofill:bg-black
+             bg-transparent border-black
+             focus:outline-none text-xs placeholder:uppercase " 
             required
           />
           <textarea
@@ -68,7 +72,9 @@ const Footer = () => {
             value={formData.message}
             onChange={handleChange}
             placeholder="Message"
-            className="w-full p-2 border-b bg-transparent border-black focus:outline-none uppercase text-xs"  
+            className="w-full p-2 border-b
+             bg-transparent border-black 
+             focus:outline-none placeholder:uppercase text-xs"  
             required
           ></textarea>
           <div className="px-10">

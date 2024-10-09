@@ -39,38 +39,37 @@ const Hero = () => {
 
   return (
     <motion.div 
-      className="hero-container" 
+      className="hero-container flex items-center justify-center" 
       ref={heroRef} 
-      style={{ opacity, height: heroHeight, minHeight: heroHeight }}
+      style={{ 
+        opacity, 
+        height: heroHeight, 
+        minHeight: heroHeight,
+        paddingTop: 0,
+        paddingBottom: 0
+      }}
     >
-      <section className="hero md:pt-[20vh]">
+      <section className="hero w-full pt-[2vh] lg:mt-[9vh]">
         <div className="hero-content">
-          <h1 className="hero-name text-[3vw] sm:text-[3vw] md:text-[4vw] lg:text-[5vw] xl:text-[6vw] tracking-tighter text-center " style={{ fontSize: 'clamp(1rem, 6vw, 6rem)' }}>
-            <span className="cursive p-[0.4vw]" style={{ fontSize: 'clamp(1rem, 8vw, 8rem)' }}>P</span>ARIKSHIT{" "}
-            <span className="cursive p-[0.2vw]" style={{ fontSize: 'clamp(1rem, 8vw, 8rem)' }}>S</span>HARMA
+          <h1 className="hero-name text-[3vw] sm:text-[3vw] md:text-[4vw] lg:text-[5vw] xl:text-[6vw] tracking-tighter text-center " style={{ fontSize: 'clamp(1rem, 5vw, 5rem)' }}>
+            <span className="cursive p-[0.4vw]" style={{ fontSize: 'clamp(1rem, 7vw, 7rem)' }}>P</span>ARIKSHIT{" "}
+            <span className="cursive p-[0.2vw]" style={{ fontSize: 'clamp(1rem, 7vw, 7rem)' }}>S</span>HARMA
           </h1>
-          <h1 className="hero-head" style={{ fontSize: 'clamp(1rem, 6vw, 6rem)' }}>
-            FRONT END <span className="developer" style={{ fontSize: 'clamp(1rem, 7.2vw, 7.2rem)' }}>DEVELOPER</span>
+          <h1 className="hero-head" style={{ fontSize: 'clamp(1rem,5vw,5rem)' }}>
+            FRONT END 
           </h1>
-          <h1 className="icon text-[1.5vw] sm:text-[1.8vw] md:text-[2vw] lg:text-[2.5vw] xl:text-[3vw] tracking-tighter uppercase" style={{ fontSize: 'clamp(1rem, 6vw, 6rem)' }}>
+          <h1><span className="developer " style={{ fontSize: 'clamp(1rem, 6vw, 6rem)' }}>DEVELOPER</span></h1>
+          <h1 className="hero-head" style={{ fontSize: 'clamp(1rem,5vw,5rem)' }}>
+            BASED IN BOMBAY
+          </h1>
+          <h1 className="icon text-[1.5vw] sm:text-[1.8vw] md:text-[2vw] lg:text-[2.5vw] xl:text-[3vw] tracking-tighter uppercase" style={{ fontSize: 'clamp(1rem, 5vw, 5rem)' }}>
+            
           Folio
-          <span className="developer" style={{ fontSize: 'clamp(1rem, 7.2vw, 7.2rem)' }}>&copy;</span>2024<span 
-          className="developer" style={{ fontSize: 'clamp(1rem, 7.2vw, 7.2rem)' }}>✨</span>
+          <span className="developer" style={{ fontSize: 'clamp(1rem, 6vw, 6rem)' }}>&copy;</span>2024<span 
+          className="developer" style={{ fontSize: 'clamp(1rem, 6vw, 6rem)' }}>✨</span>
           </h1>
-          <p className="tracking-tighter pt-[1vh] font-mono text-[1vw] md:text-[1.2vw] lg:text-[1.4vw] px-[1vw]">
-            Turning ideas into dynamic digital experiences.
-          </p>
-          <div className="scroll-indicator flex justify-center items-center">
-          <svg
-            width="2vw"
-            height="2vw"
-            viewBox="0 0 24 24"
-            fill="#000000"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M12 16.29l4.29-4.29a1 1 0 00-1.42-1.42L12 13.17l-2.87-2.88a1 1 0 00-1.42 1.42L12 16.29z" />
-          </svg>
-        </div>
+         
+         
         </div>
        
       </section>

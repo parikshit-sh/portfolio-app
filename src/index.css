@@ -5,6 +5,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 .navbar-link,
@@ -68,7 +69,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 7vw;
-  
+  line-height: -0.2;
   
 }
 .hero h1 {
@@ -239,9 +240,6 @@ text-decoration: none;
 .folio-head{
   font-size:2rem;
 }
-.about-head, .about-text{
-  color: #FAF9F6;
-}
 
 .about-section {
   background-color: transparent;
@@ -260,10 +258,6 @@ text-decoration: none;
   margin: 0 auto;
 }
 
-.about-text {
-  color: #ffffff;
-
-}
 
 a {
   text-decoration: none;
@@ -278,7 +272,7 @@ a:hover {
 
   .about-text {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
   .p-des{
     font-size: 1rem;
@@ -459,7 +453,7 @@ width: 80%;
 }
 
     .about-text {
-  line-height: 1.75rem; 
+  line-height: 1.5;
   font-weight: 400;
   color: black; 
   letter-spacing: 0.5px;
@@ -483,30 +477,15 @@ html {
   overflow-y: scroll;
 }
 
-/* Webkit browsers (Chrome, Safari, newer versions of Opera) */
-::-webkit-scrollbar {
-  width: 10px;
+
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-background-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
 }
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #effd92;
-  border-radius: 5px;
-}
-
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #effd92 transparent;
-}
-
-/* For Internet Explorer and Edge */
-body {
-  scrollbar-face-color: #effd92;
-  scrollbar-track-color: transparent;
-}
-
-

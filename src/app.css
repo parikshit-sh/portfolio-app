@@ -1,5 +1,5 @@
 body {
-  font-family: 'Inter', sans-serif;
+  font.9-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -18,9 +18,14 @@ body {
 }
 
 
-.hero-content h1, .hero-content h2, .hero-content h3 {
-  margin: 0;
-  line-height: 1;
-  color: black;
+.hero-content h1, .hero-content h2, .hero-content h3.hero-name {
 
+  line-height: 0.96;
+  
+
+}
+@media (max-width: 768px) {
+  .hero-content h1, .hero-content h2, .hero-content h3.hero-name {
+    line-height: 1;
+  }
 }
