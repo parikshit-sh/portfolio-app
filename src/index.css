@@ -478,4 +478,35 @@ width: 80%;
   color: black;
 }
 
+/* Ensure scrollbar is always visible */
+html {
+  overflow-y: scroll;
+}
+
+/* Webkit browsers (Chrome, Safari, newer versions of Opera) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #effd92;
+  border-radius: 5px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #effd92 transparent;
+}
+
+/* For Internet Explorer and Edge */
+body {
+  scrollbar-face-color: #effd92;
+  scrollbar-track-color: transparent;
+}
+
 

@@ -1,4 +1,4 @@
-import { useEffect, useRef} from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "../index.css";
 
@@ -6,25 +6,44 @@ const Hero = () => {
   const heroRef = useRef(null);
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, 400], [1, 0]);
+  const [heroHeight, setHeroHeight] = useState('100vh');
 
   useEffect(() => {
     const handleResize = () => {
       if (heroRef.current) {
-        heroRef.current.style.height = `${window.innerHeight}px`;
+        const height = `${window.innerHeight}px`;
+        setHeroHeight(height);
+        heroRef.current.style.height = height;
       }
+    };
+
+    const handleScroll = () => {
+      sessionStorage.setItem('scrollPosition', window.pageYOffset);
     };
 
     handleResize();
     window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
+
+    // Restore scroll position on reload
+    const savedScrollPosition = sessionStorage.getItem('scrollPosition');
+    if (savedScrollPosition) {
+      window.scrollTo(0, parseInt(savedScrollPosition));
+    }
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <motion.div className="hero-container" ref={heroRef} style={{ opacity }}>
-      <section className="hero lg:pt-[20vh]">
+    <motion.div 
+      className="hero-container" 
+      ref={heroRef} 
+      style={{ opacity, height: heroHeight, minHeight: heroHeight }}
+    >
+      <section className="hero md:pt-[20vh]">
         <div className="hero-content">
           <h1 className="hero-name text-[3vw] sm:text-[3vw] md:text-[4vw] lg:text-[5vw] xl:text-[6vw] tracking-tighter text-center " style={{ fontSize: 'clamp(1rem, 6vw, 6rem)' }}>
             <span className="cursive p-[0.4vw]" style={{ fontSize: 'clamp(1rem, 8vw, 8rem)' }}>P</span>ARIKSHIT{" "}

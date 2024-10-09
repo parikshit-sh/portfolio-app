@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { AnimatePresence } from "framer-motion";
@@ -8,6 +8,10 @@ import About from "./components/About";
 import Lenis from "@studio-freight/lenis";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   const [showPreLoader, setShowPreLoader] = useState(true);
@@ -31,30 +35,65 @@ const App = () => {
 
       requestAnimationFrame(update);
 
+      // Refresh ScrollTrigger on load and resize
+      const refreshScrollTrigger = () => {
+        ScrollTrigger.refresh();
+      };
+
+      window.addEventListener('load', refreshScrollTrigger);
+      window.addEventListener('resize', refreshScrollTrigger);
+
       return () => {
         lenis.destroy();
         window.removeEventListener('resize', handleResize);
+        window.removeEventListener('load', refreshScrollTrigger);
+        window.removeEventListener('resize', refreshScrollTrigger);
       };
     }
   }, [isMobile]);
 
   useEffect(() => {
-    if (!isMobile && showPreLoader) {
-      const timer = setTimeout(() => {
-        setShowPreLoader(false);
-        setShowNavbar(true);
-      }, 4000); 
-
-      return () => clearTimeout(timer);
-    } else {
-      setShowNavbar(true);
+    // Refresh ScrollTrigger after preloader is hidden
+    if (!showPreLoader) {
+      ScrollTrigger.refresh();
     }
-  }, [isMobile, showPreLoader]);
+  }, [showPreLoader]);
+
+  useEffect(() => {
+    const savedScrollPosition = sessionStorage.getItem('scrollPosition');
+    if (savedScrollPosition) {
+      window.scrollTo(0, parseInt(savedScrollPosition));
+    }
+
+    const handleBeforeUnload = () => {
+      sessionStorage.setItem('scrollPosition', window.pageYOffset);
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+
+  useLayoutEffect(() => {
+    const forceReflow = () => {
+      document.body.offsetHeight;
+      ScrollTrigger.refresh();
+    };
+
+    window.addEventListener('load', forceReflow);
+
+    return () => {
+      window.removeEventListener('load', forceReflow);
+    };
+  }, []);
 
   return (
     <>
-      {!isMobile && showPreLoader && (
-        <PreLoader setShowPreLoader={setShowPreLoader} setShowNavbar={setShowNavbar} />
+      {showPreLoader && (
+        <PreLoader setShowPreLoader={setShowPreLoader}
+         setShowNavbar={setShowNavbar} />
       )}
       <Router>
         <div className="overflow-wrapper">
