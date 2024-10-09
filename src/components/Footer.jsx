@@ -40,14 +40,14 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer py-16 bg-transparent text-black">
+    <footer className="footer py-20 bg-transparent text-black">
       
       <div className="max-w-4xl mx-auto px-4">
         
-        <h2 className="text-4xl  mb-8 text-center about-head">
+        <h2 className="text-4xl mb-8 text-center about-head">
       DROP A MESSAGE
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 p-0 md:p-8">
           <input
             type="text"
             name="from_name"
@@ -67,7 +67,7 @@ const Footer = () => {
             placeholder="Email"
             className="w-full p-2 border-b autofill:bg-black
              bg-transparent border-black
-             focus:outline-none text-xs placeholder:uppercase " 
+             focus:outline-none text-xs placeholder:uppercase" 
             required
           />
           <textarea
@@ -93,13 +93,14 @@ const Footer = () => {
           </div>
         </form>
         {showNotification && (
-          <div className="fixed bottom-4 right-4 bg-black text-white py-2 px-4 rounded shadow-lg transition-opacity duration-300">
+          <div className="fixed bottom-4 right-4 bg-black text-white
+           py-2 px-4 rounded shadow-lg transition-opacity duration-300">
             Message sent successfully
           </div>
         )}
-        <div className="mt-12 flex justify-between items-center">
-          <p className="text-sm">&copy; {new Date().getFullYear()} FOLIO</p>
-          
+        <div className="absolute bottom-4 right-4 flex justify-end ">
+          <p className="text-2xl " style={{
+            fontFamily:'PPMondwest' }}>&copy; {new Date().getFullYear()} FOLIO </p>
         </div>
       </div>
       

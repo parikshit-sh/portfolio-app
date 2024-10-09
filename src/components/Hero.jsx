@@ -73,7 +73,11 @@ const Hero = () => {
           <span 
           className="developer" style={{ fontSize: 'clamp(1rem, 6.5vw, 6.5rem)' }}>⚗️✨</span>
           </h1>
-      
+          <div className="scroll-indicator-container absolute bottom-8 right-8">
+            <div className="scroll-indicator w-6 h-10 flex justify-center items-center">
+              <div className="scroll-dot text-black text-2xl">↓</div>
+            </div>
+          </div>
         </div>
        
       </section>

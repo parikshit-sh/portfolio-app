@@ -158,7 +158,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="projects-section py-20 flex flex-col items-center" id="projects_">
+    <section className="projects-section py-20  flex flex-col items-center" id="projects_">
       <div className="max-w-6xl w-full px-12">
       <h1 className="text-4xl lg:text-5xl mb-12 uppercase" id="prod">
           Projects
@@ -200,7 +200,7 @@ const Projects = () => {
                 className="project-details overflow-hidden h-0 opacity-0"
               >
                 <div className="py-6">
-                  <p className="mb-4 text-3xl max-w-4xl">{project.description}</p>
+                  <p className="mb-4 text-[1.3rem] max-w-4xl md:text-3xl">{project.description}</p>
                   <div className="flex mb-4">
                     <a 
                       href={project.liveLink} 
