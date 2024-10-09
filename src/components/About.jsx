@@ -3,12 +3,12 @@ import "../app.css";
 
 const About = () => {
   return (
-    <section className="about-section py-8 flex flex-col items-center md:pt-[19rem] pt-[14rem]">
+    <section className="about-section py-8 flex flex-col items-center lg:pt-[19rem]">
       <div className="max-w-6xl w-full px-12">
 
         <div className="flex justify-center">
           <div className="w-full lg:w-full ">
-            <p className="text-xl md:text-3xl lg:text-4xl px-4 lg:px-6 ">
+            <p className="text-md sm:text-lg md:text-3xl lg:text-4xl lg:px-6">
               Hi, I’m Parikshit, a passionate Web Developer dedicated to
               crafting exceptional digital experiences. With a solid background
               in front-end technologies like React and NextJS, JavaScript, TailwindCSS,

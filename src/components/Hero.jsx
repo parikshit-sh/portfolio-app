@@ -18,7 +18,7 @@ const Hero = () => {
     };
 
     const handleScroll = () => {
-      sessionStorage.setItem('scrollPosition', window.pageYOffset);
+      sessionStorage.setItem('scrollPosition', window.scrollY);
     };
 
     handleResize();
