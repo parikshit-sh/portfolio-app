@@ -8,7 +8,7 @@ import Oasis3 from "../assets/images/oasis3.webp";
 import Rentals from "../assets/images/rentals.webp";  
 import Rentals2 from "../assets/images/rentals2.webp";
 import Rentals3 from "../assets/images/rentals3.webp";
-import tokenStats2 from "../assets/images/tokenStats.webp";
+import tokenStats2 from "../assets/images/tokenstats.webp";
 import tokenStats from "../assets/images/token.webp";
 import tokenStats3 from "../assets/images/tokens2.png";
 
