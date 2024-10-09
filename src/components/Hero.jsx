@@ -49,7 +49,7 @@ const Hero = () => {
         paddingBottom: 0
       }}
     >
-      <section className="hero w-full">
+      <section className="hero w-full lg:pt-[19vh]">
         <div className="hero-content">
           <h1 className="hero-name text-[3vw] sm:text-[3vw] md:text-[4vw] lg:text-[5vw] xl:text-[6vw] tracking-tighter text-center " style={{ fontSize: 'clamp(1rem, 5vw, 5rem)' }}>
             <span className="cursive p-[0.4vw]" style={{ fontSize: 'clamp(1rem, 7vw, 7rem)' }}>P</span>ARIKSHIT{" "}
