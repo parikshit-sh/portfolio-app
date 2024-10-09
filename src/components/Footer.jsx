@@ -98,8 +98,8 @@ const Footer = () => {
             Message sent successfully
           </div>
         )}
-        <div className="absolute bottom-4 right-4 flex justify-end ">
-          <p className="text-2xl " style={{
+        <div className="absolute bottom-4 right-4">
+          <p className="text-xl" style={{
             fontFamily:'PPMondwest' }}>&copy; {new Date().getFullYear()} FOLIO </p>
         </div>
       </div>

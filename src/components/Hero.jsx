@@ -18,43 +18,28 @@ const Hero = () => {
       }
     };
 
-    const handleScroll = () => {
-      sessionStorage.setItem('scrollPosition', window.pageYOffset);
-    };
-
     handleResize();
     window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
-
-    // Restore scroll position on reload
-    const savedScrollPosition = sessionStorage.getItem('scrollPosition');
-    if (savedScrollPosition) {
-      window.scrollTo(0, parseInt(savedScrollPosition));
-    }
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
     <motion.div 
-      className="hero-container flex items-center justify-center" 
+      className="hero-container fixed inset-0 flex items-center justify-center overflow-hidden"
       ref={heroRef} 
       style={{ 
         opacity, 
-        height: heroHeight, 
-        minHeight: heroHeight,
-        paddingTop: 0,
-        paddingBottom: 0
+        height: heroHeight,
       }}
     >
-      <section className="hero w-full lg:pt-[12vh]">
+      <section className="hero w-full">
         <div className="hero-content">
           <h1 className="hero-name text-[3vw] sm:text-[3vw] 
           md:text-[4vw] lg:text-[5vw] xl:text-[6vw] uppercase
-           tracking-tighter text-center " style={{ fontSize: 'clamp(1rem, 5.3vw, 5.3rem)' }}>
+           tracking-tighter text-center" style={{ fontSize: 'clamp(1rem, 5.3vw, 5.3rem)' }}>
             <span className="cursive p-[0.4vw] uppercase" style={{ fontSize: 'clamp(1rem, 7vw, 7rem)' }}>P</span>ARIKSHIT{" "}
             <span className="cursive p-[0.2vw]" style={{ fontSize: 'clamp(1rem, 7vw, 7rem)' }}>S</span>HARMA
           </h1>
