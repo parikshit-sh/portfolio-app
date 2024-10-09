@@ -51,15 +51,9 @@ const App = () => {
     }
   }, [isMobile, showPreLoader]);
 
-  useEffect(() => {
-    if (!showPreLoader) {
-      document.getElementById('root').classList.add('loaded');
-    }
-  }, [showPreLoader]);
-
   return (
     <>
-      {showPreLoader && (
+      {!isMobile && showPreLoader && (
         <PreLoader setShowPreLoader={setShowPreLoader} setShowNavbar={setShowNavbar} />
       )}
       <Router>
