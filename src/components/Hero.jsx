@@ -11,9 +11,7 @@ const Hero = () => {
   useEffect(() => {
     const handleResize = () => {
       if (heroRef.current) {
-        const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
-        const windowHeight = window.innerHeight;
-        const height = `${windowHeight - navbarHeight}px`;
+        const height = `${window.innerHeight}px`;
         setHeroHeight(height);
         heroRef.current.style.height = height;
       }
@@ -25,7 +23,6 @@ const Hero = () => {
 
     handleResize();
     window.addEventListener('resize', handleResize);
-    window.addEventListener('orientationchange', handleResize);
     window.addEventListener('scroll', handleScroll);
 
     // Restore scroll position on reload
@@ -36,7 +33,6 @@ const Hero = () => {
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('orientationchange', handleResize);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -72,7 +68,6 @@ const Hero = () => {
           <span className="developer" style={{ fontSize: 'clamp(1rem, 6vw, 6rem)' }}>&copy;</span>2024<span 
           className="developer" style={{ fontSize: 'clamp(1rem, 6vw, 6rem)' }}>✨</span>
           </h1>
-         
          
         </div>
        

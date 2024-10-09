@@ -436,6 +436,15 @@ width: 80%;
     flex: 1 1 45%;
     margin: 0.25rem;
   }
+  
+}
+@media (max-height:500px) {
+  .hero{
+   padding-top: 19rem;
+  }
+  .about-section{
+    margin-top: 20rem;
+  }
 }
 @media (max-width: 344px) {
   .about-head {
