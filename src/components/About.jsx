@@ -3,7 +3,7 @@ import "../app.css";
 
 const About = () => {
   return (
-    <section className="about-section py-8 flex flex-col items-center lg:pt-[19rem]">
+    <section className="about-section py-8 flex flex-col items-center lg:pt-[19rem] ">
       <div className="max-w-6xl w-full px-12">
 
         <div className="flex justify-center">

@@ -15,9 +15,11 @@
 }
 
 body {
+  background-color: #FAF9F6;
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -208,11 +210,18 @@ text-decoration: none;
 }
 @media (max-width: 1024px) {
   .hero-content h1{
-    font-size: 6vw;
+    font-size: 7vw !important;
+  }
+  .developer{
+    font-size: 9vw !important;
+  }
+  .cursive{
+    font-size: 8vw !important;
   }
   .hero-content p {
     font-size: 0.9rem;
   }
+  
 }
 
 @media (min-width: 1440px) {
@@ -371,6 +380,7 @@ width: 80%;
   .project-card {
     flex-direction: row;
   }
+  
 }
 
 

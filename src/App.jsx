@@ -12,13 +12,15 @@ import Footer from "./components/Footer";
 const App = () => {
   const [showPreLoader, setShowPreLoader] = useState(true);
   const [showNavbar, setShowNavbar] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
+  const [isMobile, setIsMobile] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 800);
     };
 
+    handleResize();
     window.addEventListener('resize', handleResize);
 
     if (!isMobile) {
@@ -43,33 +45,35 @@ const App = () => {
       const timer = setTimeout(() => {
         setShowPreLoader(false);
         setShowNavbar(true);
+        setIsLoading(false);
       }, 4000); 
 
       return () => clearTimeout(timer);
     } else {
       setShowNavbar(true);
+      setIsLoading(false);
     }
   }, [isMobile, showPreLoader]);
 
+  if (isLoading) {
+    return <div className="bg-[#FAF9F6] min-h-screen"></div>;
+  }
+
   return (
-    <>
-      {!isMobile && showPreLoader && (
-        <PreLoader setShowPreLoader={setShowPreLoader} setShowNavbar={setShowNavbar} />
-      )}
-      <Router>
-        <div className="overflow-wrapper">
-          <div className="bg-[#FAF9F6] min-h-screen">
-            <AnimatePresence>
-              {showNavbar && <Navbar key="navbar" />}
-              <Hero key="hero" />
-              <About key="about" />
-              <Projects key="projects" />
-              <Footer key="footer" />
-            </AnimatePresence>
-          </div>
-        </div>
-      </Router>
-    </>
+    <Router>
+      <div className="overflow-wrapper bg-[#FAF9F6] min-h-screen">
+        <AnimatePresence>
+          {!isMobile && showPreLoader && (
+            <PreLoader setShowPreLoader={setShowPreLoader} setShowNavbar={setShowNavbar} />
+          )}
+          {showNavbar && <Navbar key="navbar" />}
+          <Hero key="hero" />
+          <About key="about" />
+          <Projects key="projects" />
+          <Footer key="footer" />
+        </AnimatePresence>
+      </div>
+    </Router>
   );
 };
 
