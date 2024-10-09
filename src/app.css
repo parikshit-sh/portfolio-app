@@ -24,7 +24,7 @@ body {
 
 
 .hero-content h1, .hero-content h2, .hero-content h3.hero-name {
-
+  color: black;
   line-height: 0.96;
   
 

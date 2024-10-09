@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "../index.css";
 
+
 const Hero = () => {
   const heroRef = useRef(null);
   const { scrollY } = useScroll();
@@ -49,26 +50,30 @@ const Hero = () => {
         paddingBottom: 0
       }}
     >
-      <section className="hero w-full lg:pt-[19vh]">
+      <section className="hero w-full lg:pt-[12vh]">
         <div className="hero-content">
-          <h1 className="hero-name text-[3vw] sm:text-[3vw] md:text-[4vw] lg:text-[5vw] xl:text-[6vw] tracking-tighter text-center " style={{ fontSize: 'clamp(1rem, 5vw, 5rem)' }}>
-            <span className="cursive p-[0.4vw]" style={{ fontSize: 'clamp(1rem, 7vw, 7rem)' }}>P</span>ARIKSHIT{" "}
+          <h1 className="hero-name text-[3vw] sm:text-[3vw] 
+          md:text-[4vw] lg:text-[5vw] xl:text-[6vw] uppercase
+           tracking-tighter text-center " style={{ fontSize: 'clamp(1rem, 5.3vw, 5.3rem)' }}>
+            <span className="cursive p-[0.4vw] uppercase" style={{ fontSize: 'clamp(1rem, 7vw, 7rem)' }}>P</span>ARIKSHIT{" "}
             <span className="cursive p-[0.2vw]" style={{ fontSize: 'clamp(1rem, 7vw, 7rem)' }}>S</span>HARMA
           </h1>
-          <h1 className="hero-head" style={{ fontSize: 'clamp(1rem,5vw,5rem)' }}>
-            FRONT END 
-          </h1>
-          <h1><span className="developer " style={{ fontSize: 'clamp(1rem, 6vw, 6rem)' }}>DEVELOPER</span></h1>
-          <h1 className="hero-head" style={{ fontSize: 'clamp(1rem,5vw,5rem)' }}>
-            BASED IN BOMBAY
-          </h1>
-          <h1 className="icon text-[1.5vw] sm:text-[1.8vw] md:text-[2vw] lg:text-[2.5vw] xl:text-[3vw] tracking-tighter uppercase" style={{ fontSize: 'clamp(1rem, 5vw, 5rem)' }}>
-            
-          Folio
-          <span className="developer" style={{ fontSize: 'clamp(1rem, 6vw, 6rem)' }}>&copy;</span>2024<span 
-          className="developer" style={{ fontSize: 'clamp(1rem, 6vw, 6rem)' }}>✨</span>
+          <h1 className="hero-head" style={{ fontSize: 'clamp(1rem,5.3vw,5.3rem)' }}>
+          FRONT END{" "}
+          <span 
+          className="developer" style={{ fontSize: 'clamp(1rem, 6.5vw, 6.5rem)' }}>DEVELOPER</span>
           </h1>
          
+         
+          
+          <h1 className="icon text-[1.5vw] sm:text-[1.8vw] md:text-[2vw] lg:text-[2.5vw] xl:text-[3vw] tracking-tighter uppercase" style={{ fontSize: 'clamp(1rem, 5.3vw, 5.3rem)' }}>
+            
+          Folio
+          <span className="developer" style={{ fontSize: 'clamp(1rem, 6.5vw, 6.5rem)' }}>&copy;</span>2024
+          <span 
+          className="developer" style={{ fontSize: 'clamp(1rem, 6.5vw, 6.5rem)' }}>⚗️✨</span>
+          </h1>
+      
         </div>
        
       </section>

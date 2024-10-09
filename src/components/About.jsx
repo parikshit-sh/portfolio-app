@@ -1,14 +1,15 @@
 import "../index.css";
 import "../app.css";
-
 const About = () => {
   return (
-    <section className="about-section py-8 flex flex-col items-center min-h-screen lg:pt-[18rem]">
+    <section className="about-section py-8 flex flex-col items-center min-h-screen lg:pt-[13rem] text-white">
+      
       <div className="max-w-6xl w-full px-4 sm:px-6 lg:px-8 flex flex-col justify-center flex-grow">
+        
         <div className="flex justify-center mb-8">
           <div className="w-full lg:w-full">
             <p className="text-xl md:text-3xl lg:text-4xl px-4">
-              Hi, I&apos;m Parikshit, a passionate Web Developer dedicated to
+              Hi, I&apos;m  a Web Developer with a passion for
               crafting exceptional digital experiences. With a solid background
               in front-end technologies like React and NextJS, JavaScript, TailwindCSS,
               and a keen eye for design.
