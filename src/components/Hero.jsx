@@ -12,7 +12,8 @@ const Hero = () => {
     const handleResize = () => {
       if (heroRef.current) {
         const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
-        const height = `calc(100vh - ${navbarHeight}px)`;
+        const windowHeight = window.innerHeight;
+        const height = `${windowHeight - navbarHeight}px`;
         setHeroHeight(height);
         heroRef.current.style.height = height;
       }
@@ -24,6 +25,7 @@ const Hero = () => {
 
     handleResize();
     window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleResize);
     window.addEventListener('scroll', handleScroll);
 
     // Restore scroll position on reload
@@ -34,6 +36,7 @@ const Hero = () => {
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', handleResize);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -50,7 +53,7 @@ const Hero = () => {
         paddingBottom: 0
       }}
     >
-      <section className="hero w-full pt-[2vh] lg:mt-[10vh]">
+      <section className="hero w-full">
         <div className="hero-content">
           <h1 className="hero-name text-[3vw] sm:text-[3vw] md:text-[4vw] lg:text-[5vw] xl:text-[6vw] tracking-tighter text-center " style={{ fontSize: 'clamp(1rem, 5vw, 5rem)' }}>
             <span className="cursive p-[0.4vw]" style={{ fontSize: 'clamp(1rem, 7vw, 7rem)' }}>P</span>ARIKSHIT{" "}
