@@ -11,7 +11,8 @@ const Hero = () => {
   useEffect(() => {
     const handleResize = () => {
       if (heroRef.current) {
-        const height = `${window.innerHeight}px`;
+        const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
+        const height = `calc(100vh - ${navbarHeight}px)`;
         setHeroHeight(height);
         heroRef.current.style.height = height;
       }

@@ -15,7 +15,6 @@
 }
 
 body {
-  background-color: #FAF9F6;
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
@@ -498,4 +497,34 @@ input:-webkit-autofill:active{
     -webkit-background-clip: text;
     -webkit-background-color: #ffffff;
     transition: background-color 5000s ease-in-out 0s;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-section {
+  position: relative;
+  z-index: 2;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+@media (max-width: 640px) {
+  .about-section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero-container {
+    height: auto !important;
+    min-height: 100vh !important;
+  }
+  
+  .about-section {
+    padding-top: 20vh;
+  }
 }
