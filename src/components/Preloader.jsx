@@ -16,15 +16,14 @@ const Preloader = ({ setShowPreLoader, setShowNavbar }) => {
       duration: 0.6,
       ease: "power1.inOut", 
       y: "-100%",
-      delay:0.2
-    })
-
+      delay: 0.2
+    });
 
   }, [setShowPreLoader, setShowNavbar]);
 
   return (
-    <div className="preloader flex flex-col">
-
+    <div className="preloader">
+      {/* Add any content for your preloader here */}
     </div>
   );
 };
