@@ -8,17 +8,18 @@ const Hero = () => {
   const opacity = useTransform(scrollY, [0, 400], [1, 0]);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (heroRef.current) {
-        heroRef.current.style.height = `${window.innerHeight}px`;
+    const heroElement = heroRef.current;
+    const setHeroHeight = () => {
+      if (heroElement) {
+        heroElement.style.height = `${window.innerHeight}px`;
       }
     };
 
-    handleResize();
-    window.addEventListener('resize', handleResize);
+    setHeroHeight();
+    window.addEventListener('resize', setHeroHeight);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', setHeroHeight);
     };
   }, []);
 
