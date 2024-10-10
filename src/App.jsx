@@ -21,20 +21,25 @@ const App = () => {
 
     window.addEventListener('resize', handleResize);
 
-    const lenis = new Lenis({ smooth: true });
+    let lenis;
+    if (!isMobile) {
+      lenis = new Lenis({ smooth: true });
 
-    const update = (time) => {
-      lenis.raf(time);
+      const update = (time) => {
+        lenis.raf(time);
+        requestAnimationFrame(update);
+      };
+
       requestAnimationFrame(update);
-    };
-
-    requestAnimationFrame(update);
+    }
 
     return () => {
-      lenis.destroy();
+      if (lenis) {
+        lenis.destroy();
+      }
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     if (!isMobile && showPreLoader) {

@@ -47,7 +47,7 @@ const Hero = () => {
           <h1 className="icon uppercase" style={{fontFamily: 'PPEditorial'}}>
             Folio
             <span className="developer">&copy;</span>2024
-            <span className="developer">⚗️✨</span>
+            <span className="developer">⚗✨</span>
           </h1>
         </div>
       </motion.div>

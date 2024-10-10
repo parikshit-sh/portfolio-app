@@ -536,7 +536,7 @@ input:-webkit-autofill:active{
 /* Add or update these styles */
 
 .hero-container {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -572,7 +572,7 @@ input:-webkit-autofill:active{
 }
 
 .hero-content {
-  position: fixed;
+  position: sticky;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
