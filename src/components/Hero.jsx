@@ -1,86 +1,50 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "../index.css";
-
 
 const Hero = () => {
   const heroRef = useRef(null);
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, 400], [1, 0]);
-  const [heroHeight, setHeroHeight] = useState('100vh');
 
   useEffect(() => {
-    const handleResize = () => {
-      if (heroRef.current) {
-        const height = `${window.innerHeight}px`;
-        setHeroHeight(height);
-        heroRef.current.style.height = height;
-      }
+    const setVh = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
 
-    const handleScroll = () => {
-      sessionStorage.setItem('scrollPosition', window.pageYOffset);
-    };
+    setVh();
 
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
-
-    // Restore scroll position on reload
-    const savedScrollPosition = sessionStorage.getItem('scrollPosition');
-    if (savedScrollPosition) {
-      window.scrollTo(0, parseInt(savedScrollPosition));
-    }
+    window.addEventListener('resize', setVh);
+    window.addEventListener('orientationchange', setVh);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', setVh);
+      window.removeEventListener('orientationchange', setVh);
     };
   }, []);
 
   return (
     <motion.div 
-      className="hero-container flex items-center justify-center" 
+      className="hero-container"
       ref={heroRef} 
-      style={{ 
-        opacity, 
-        height: heroHeight, 
-        minHeight: heroHeight,
-        paddingTop: 0,
-        paddingBottom: 0
-      }}
+      style={{ opacity }}
     >
-      <section className="hero w-full lg:pt-[12vh]">
-        <div className="hero-content px-8">
-          <h1 className="hero-name text-[3vw] sm:text-[3vw] 
-          md:text-[4vw] lg:text-[5vw] xl:text-[6vw] uppercase
-           tracking-tighter text-center " style={{ fontSize: 'clamp(1rem, 5.3vw, 5.3rem)' }}>
-            <span className="cursive p-[0.4vw] uppercase" style={{ fontSize: 'clamp(1rem, 7vw, 7rem)' }}>P</span>ARIKSHIT{" "}
-            <span className="cursive p-[0.2vw]" style={{ fontSize: 'clamp(1rem, 7vw, 7rem)' }}>S</span>HARMA
-          </h1>
-          <h1 className="hero-head" style={{ fontSize: 'clamp(1rem,5.3vw,5.3rem)' }}>
+      <div className="hero-content">
+        <h1 className="hero-head" style={{fontFamily: 'PPEditorial'}}>
+          <span className="cursive">P</span>ARIKSHIT{" "}
+          <span className="cursive">S</span>HARMA
+        </h1>
+        <h1 className="hero-head" style={{fontFamily: 'PPEditorial'}}>
           FRONT END{" "}
-          <span 
-          className="developer" style={{ fontSize: 'clamp(1rem, 6.5vw, 6.5rem)' }}>DEVELOPER</span>
-          </h1>
-         
-         
-          
-          <h1 className="icon text-[1.5vw] sm:text-[1.8vw] md:text-[2vw] lg:text-[2.5vw] xl:text-[3vw] tracking-tighter uppercase" style={{ fontSize: 'clamp(1rem, 5.3vw, 5.3rem)' }}>
-            
+          <span className="developer">DEVELOPER</span>
+        </h1>
+        <h1 className="icon uppercase" style={{fontFamily: 'PPEditorial'}}>
           Folio
-          <span className="developer" style={{ fontSize: 'clamp(1rem, 6.5vw, 6.5rem)' }}>&copy;</span>2024
-          <span 
-          className="developer" style={{ fontSize: 'clamp(1rem, 6.5vw, 6.5rem)' }}>⚗️✨</span>
-          </h1>
-          <div className="scroll-indicator-container absolute bottom-8 right-8">
-            <div className="scroll-indicator w-6 h-10 flex justify-center items-center">
-              <div className="scroll-dot text-black text-2xl">↓</div>
-            </div>
-          </div>
-        </div>
-       
-      </section>
+          <span className="developer">&copy;</span>2024
+          <span className="developer">⚗️✨</span>
+        </h1>
+      </div>
     </motion.div>
   );
 };
