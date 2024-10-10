@@ -61,7 +61,78 @@ body {
   font-size: 7vw;
 
 }
+.hero-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: calc(2vh + 2vw); /* Responsive margin */
+}
 
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+}
+
+.hero-content {
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+  padding: calc(1rem + 1vw);
+}
+
+// ... existing media queries ...
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 8vw !important; 
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .developer {
+    font-size: 10vw !important;
+  }
+
+  .cursive {
+    font-size: 10vw !important;
+    padding: 0.2rem;
+  }
+}
+
+// Add this new media query for landscape orientation
+@media (max-width: 896px) and (orientation: landscape) {
+  .hero-container {
+    position: absolute;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero-content h1 {
+    font-size: 6vw !important;
+  }
+
+  .developer {
+    font-size: 8vw !important;
+  }
+
+  .cursive {
+    font-size: 8vw !important;
+  }
+}
 
 .cursive{
   font-family: "Great Vibes", cursive;
@@ -77,7 +148,7 @@ body {
   font-size: 8vw; 
   
 
- 
+
 }
 
 .hero p {
@@ -255,6 +326,7 @@ text-decoration: none;
 .about-section {
   position: relative;
   z-index: 1;
+  padding-top: calc(3vh + 3vw); /* Responsive padding */
 }
 
 .about-head {
@@ -536,79 +608,26 @@ input:-webkit-autofill:active{
 /* Add or update these styles */
 
 .hero-container {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+  position: relative;
+  z-index: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 1;
 }
 
-
-.hero-spacer {
-  height: 8rem;
+.hero {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (min-width: 768px) {
-  .hero-spacer {
-    height: 10rem;
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero-container {
+    height: auto !important;
+    min-height: 100vh !important;
   }
-}
-
-@media (min-width: 1024px) {
-  .hero-spacer {
-    height: 42rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .hero-spacer {
-    height: 52rem;
-  }
-}
-
-.hero-content {
-  position: sticky;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.hero-name, .hero-head, .icon {
-  margin: 0;
-  padding: 0;
-  line-height: 1.2;
-}
-
-.hero-name {
-  font-size: clamp(1rem, 5.3vw, 5.3rem);
-}
-
-.cursive {
-  font-size: clamp(1rem, 7vw, 7rem);
-}
-
-.hero-head {
-  font-size: clamp(1rem, 5.3vw, 5.3rem);
-}
-
-.developer {
-  font-size: clamp(1rem, 6.5vw, 6.5rem);
-}
-
-.icon {
-  font-size: clamp(1rem, 5.3vw, 5.3rem);
-}
-
-.scroll-indicator-container {
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 10;
 }
 
 .about-section {
