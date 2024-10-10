@@ -19,22 +19,27 @@ const App = () => {
       setIsMobile(window.innerWidth <= 800);
     };
 
+    if(!isMobile){
+      const lenis = new Lenis({ smooth: true });
+
+      const update = (time) => {
+        lenis.raf(time);
+        requestAnimationFrame(update);
+      };
+
+      requestAnimationFrame(update);
+
+      return () => {
+        lenis.destroy();        
+      };          
+    }
+
     window.addEventListener('resize', handleResize);
 
-    const lenis = new Lenis({ smooth: true });
-
-    const update = (time) => {
-      lenis.raf(time);
-      requestAnimationFrame(update);
-    };
-
-    requestAnimationFrame(update);
-
     return () => {
-      lenis.destroy();
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     if (!isMobile && showPreLoader) {
@@ -55,7 +60,7 @@ const App = () => {
         <PreLoader setShowPreLoader={setShowPreLoader} setShowNavbar={setShowNavbar} />
       )}
       <Router>
-        <div className="app-container ">
+        <div className="app-container">
           <AnimatePresence>
             {showNavbar && <Navbar key="navbar" />}
             <Hero key="hero" />

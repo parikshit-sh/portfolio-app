@@ -709,9 +709,3 @@ input:-webkit-autofill:active{
   position: relative;
   overflow-x: hidden;
 }
-
-.content-wrapper {
-  position: relative;
-  z-index: 2;
-  background-color: #FAF9F6;
-}

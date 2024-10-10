@@ -7,10 +7,6 @@ body {
   
 }
 
-.overflow-wrapper {
-  background-color: #FAF9F6; /* Set this to your app's background color */
-  min-height: 100vh;
-}
 
 .hero {
   position: sticky;
