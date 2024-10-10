@@ -415,7 +415,9 @@ width: 80%;
   .hero-content h1 {
     font-size: 8vw !important; 
   }
-
+  .hero-spacer {
+    height: 2vh;
+  }
   .hero-content p {
     font-size: 0.9rem;
   }
@@ -544,15 +546,34 @@ input:-webkit-autofill:active{
   align-items: center;
   justify-content: center;
   z-index: 1;
-  will-change: transform;
 }
 
+
 .hero-spacer {
-  height: 100vh;
+  height: 8rem;
+}
+
+@media (min-width: 768px) {
+  .hero-spacer {
+    height: 10rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-spacer {
+    height: 42rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-spacer {
+    height: 48rem;
+  }
 }
 
 .hero-content {
-  max-width: 90%;
+  position: fixed;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
 }
@@ -583,10 +604,38 @@ input:-webkit-autofill:active{
   font-size: clamp(1rem, 5.3vw, 5.3rem);
 }
 
+.scroll-indicator-container {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 10;
+}
+
 .about-section {
   position: relative;
   z-index: 2;
-  background-color: #faf9f6; /* or any color that matches your design */
+  padding-top: 100vh; /* This pushes the about section below the hero */
 }
 
-/* Remove any conflicting styles for .hero, .hero-container, or .about-section */
+@media (max-width: 640px) {
+  .about-section {
+    padding-top: 100vh;
+  }
+  .hero-content{
+    padding-top: 0rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero-container {
+    position: relative;
+    height: auto !important;
+    min-height: 100vh !important;
+  }
+  
+  .about-section {
+    padding-top: 0;
+  }
+}
+
+/* Remove or comment out any conflicting styles for .hero, .hero-container, or .about-section */
