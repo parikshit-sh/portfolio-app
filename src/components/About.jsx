@@ -2,7 +2,7 @@ import "../index.css";
 import "../app.css";
 const About = () => {
   return (
-    <section className="about-section py-8 flex flex-col items-center lg:pt-[19rem]">
+    <section className="about-section py-8 flex flex-col items-center">
       <div className="max-w-6xl w-full">
       <div className="max-w-6xl w-full px-4 sm:px-6 lg:px-8 flex flex-col 
       justify-center flex-grow">

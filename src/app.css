@@ -8,13 +8,6 @@ body {
 }
 
 
-.hero {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background-color: transparent;
-}
-
 .about-me {
   background-color: transparent;
   color: black;
