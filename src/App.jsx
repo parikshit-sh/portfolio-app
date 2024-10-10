@@ -55,16 +55,16 @@ const App = () => {
         <PreLoader setShowPreLoader={setShowPreLoader} setShowNavbar={setShowNavbar} />
       )}
       <Router>
-        <div className="overflow-wrapper">
-          <div className="min-h-screen">
-            <AnimatePresence>
-              {showNavbar && <Navbar key="navbar" />}
-              <Hero key="hero" />
+        <div className="app-container ">
+          <AnimatePresence>
+            {showNavbar && <Navbar key="navbar" />}
+            <Hero key="hero" />
+            <div className="content-wrapper">
               <About key="about" />
               <Projects key="projects" />
               <Footer key="footer" />
-            </AnimatePresence>
-          </div>
+            </div>
+          </AnimatePresence>
         </div>
       </Router>
     </>

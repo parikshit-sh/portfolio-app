@@ -663,6 +663,7 @@ input:-webkit-autofill:active{
   align-items: center;
   justify-content: center;
   z-index: 1;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -684,3 +685,14 @@ input:-webkit-autofill:active{
 /* Remove the .hero-spacer styles as we no longer need it */
 
 /* ... (keep your other existing styles) ... */
+
+.app-container {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  background-color: #FAF9F6;
+}
