@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "../index.css";
 
@@ -6,34 +6,30 @@ const Hero = () => {
   const heroRef = useRef(null);
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, 400], [1, 0]);
-  const [heroHeight, setHeroHeight] = useState('100vh');
 
   useEffect(() => {
-    const setHeight = () => {
-      setTimeout(() => {
-        const height = window.innerHeight;
-        setHeroHeight(`${height}px`);
-        document.documentElement.style.setProperty('--vh', `${height * 0.01}px`);
-      }, 100); 
+    const setVh = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
 
-    setHeight();
+    setVh();
 
-    window.addEventListener('resize', setHeight);
-    window.addEventListener('orientationchange', setHeight);
+    window.addEventListener('resize', setVh);
+    window.addEventListener('orientationchange', setVh);
 
     return () => {
-      window.removeEventListener('resize', setHeight);
-      window.removeEventListener('orientationchange', setHeight);
+      window.removeEventListener('resize', setVh);
+      window.removeEventListener('orientationchange', setVh);
     };
   }, []);
 
   return (
-    <>
+    <div className="hero-wrapper">
       <motion.div 
         className="hero-container"
         ref={heroRef} 
-        style={{ opacity, height: heroHeight }}
+        style={{ opacity }}
       >
         <div className="hero-content">
           <h1 className="hero-head" style={{fontFamily: 'PPEditorial'}}>
@@ -51,8 +47,7 @@ const Hero = () => {
           </h1>
         </div>
       </motion.div>
-      <div className="hero-spacer mb-10" style={{ height: heroHeight }}></div>
-    </>
+    </div>
   );
 };
 
