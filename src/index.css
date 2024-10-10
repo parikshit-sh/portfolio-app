@@ -664,3 +664,18 @@ input:-webkit-autofill:active{
   height: 100vh; /* Fallback for browsers that do not support Custom Properties */
   height: calc(var(--vh, 1vh) * 100);
 }
+
+.hero-content {
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-section {
+  position: relative;
+  z-index: 2;
+  margin-top: calc(var(--vh, 1vh) * 100);
+ 
+}
+
+/* Remove any conflicting styles for .hero, .hero-container, or .about-section */
